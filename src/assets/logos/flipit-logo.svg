@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108.047" height="77.06" viewBox="0 0 108.047 77.06">
+  <defs>
+    <filter id="Flipit_2_win_for_good_" x="0.047" y="0" width="107" height="48" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-color="#333" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Flipit_2_win_for_good_2" x="0.047" y="49" width="108" height="19" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-2"/>
+      <feFlood flood-color="#333" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-187.453 174.5)">
+    <g transform="matrix(1, 0, 0, 1, 187.45, -174.5)" filter="url(#Flipit_2_win_for_good_)">
+      <text id="Flipit_2_win_for_good_3" data-name="Flipit 2 win for good!" transform="translate(0.55 34.5)" fill="#333" font-size="42" font-family="JosefinSans-BoldItalic, Josefin Sans" font-weight="700" font-style="italic"><tspan x="0" y="0">Flipit</tspan></text>
+    </g>
+    <path id="Path_5" data-name="Path 5" d="M0,3.172C79.879-2.877,104.982,1.584,104.982,1.584" transform="translate(187.5 -101.111) rotate(-0.974)" fill="none" stroke="#333" stroke-width="1"/>
+    <g transform="matrix(1, 0, 0, 1, 187.45, -174.5)" filter="url(#Flipit_2_win_for_good_2)">
+      <text id="Flipit_2_win_for_good_4" data-name="Flipit 2 win for good!" transform="translate(0.55 61.5)" fill="#333" font-size="14" font-family="JosefinSans-Italic, Josefin Sans" font-style="italic"><tspan x="0" y="0">2 </tspan><tspan y="0" font-family="JosefinSans-BoldItalic, Josefin Sans" font-weight="700">Win</tspan><tspan y="0" xml:space="preserve"> for </tspan><tspan y="0" font-family="JosefinSans-BoldItalic, Josefin Sans" font-weight="700">Good!</tspan></text>
+    </g>
+  </g>
+</svg>
