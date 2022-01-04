@@ -44,6 +44,11 @@
           <td>Ultra Fast Page Delivery via Netlify CDN</td>
         </tr>
         <tr>
+          <td>
+            Private & Secure GitHub Code Repositories
+          </td>
+        </tr>
+        <tr>
           <td>Minimal Hosting Costs</td>
         </tr>
         <tr>
@@ -54,14 +59,6 @@
         </tr>
         <tr>
           <td>Ongoing Domain Name Implementation & Management</td>
-        </tr>
-        <tr>
-          <td>Ultra Fast Page Delivery via Netlify CDN</td>
-        </tr>
-        <tr>
-          <td>
-            Private & Secure GitHub Code Repositories
-          </td>
         </tr>
         <tr>
           <td>

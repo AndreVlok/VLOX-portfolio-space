@@ -10,13 +10,13 @@
         <h3 class="about-heading">About Me</h3>
         <p>
           I am a creative; passionate about customer-centric web innovation. It
-          drives me to develop strategic customer experiences through which
+          drives me to create strategic customer experiences through which
           customers are benefitted by business goals.
         </p>
         <p>
           My <i>forte</i> is the working with the frontend of financial
-          technology; but am exploring the benefits of blockchain technology AI
-          as well as the world of DeFi.
+          technology; but am exploring the benefits of blockchain technology,
+          AI, as well as the world of DeFi.
         </p>
         <p>
           I've worked on an array of projects involving various companies,
