@@ -20,7 +20,7 @@
       <div class="center n-pad">
         <br />
         <br />
-        <h1>I'm a<span class="color-1"> Software Experience Engineer</span></h1>
+        <h1>I'm a<span class="color-1"> User Experience Engineer</span></h1>
 
         <div style="margin: 0 auto; width: 80%;">
           <h2>

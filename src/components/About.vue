@@ -10,7 +10,7 @@
         <h3 class="about-heading">About Me</h3>
         <p>
           I am a creative; passionate about customer-centric web innovation. It
-          drives me to create strategic customer experiences through which
+          drives me to design strategic customer experiences through which
           customers are benefitted by business goals.
         </p>
         <p>
