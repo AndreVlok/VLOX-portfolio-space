@@ -26,10 +26,11 @@
           <h2>
             <span class="color-2">I design</span> strategic user experiences,
             that <span class="color-2">I code</span> into high-end scalable
-            <span class="color-1">prototypes</span>. Integrated with analytics
-            and a CMS, <span class="color-3">you remain in control</span>.
-            Delivered through an <span class="color-4">ultra-fast CDN </span>and
-            deployed from <span class="color-4">secure repos</span>;
+            responsive <span class="color-1">prototypes</span>. Integrated with
+            analytics and a CMS,
+            <span class="color-3">you remain in control</span>. Delivered
+            through an <span class="color-4">ultra-fast CDN </span>and deployed
+            from <span class="color-4">secure repos</span>;
             <i
               >your prototype is the precursor to your production ready
               application.</i

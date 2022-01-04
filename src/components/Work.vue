@@ -69,10 +69,7 @@
           by Monify, provided by Sanlam.
         </p>
 
-        <a
-          download
-          href="@/assets/docs/sanlam-extended-family-funeral-cover-monify.pdf"
-        >
+        <a download href="/sanlam-extended-family-funeral-cover-monify.pdf">
           <button>Download Designs</button>
         </a>
       </div>
@@ -152,7 +149,7 @@
           respective loan partners application page.
         </p>
 
-        <a download href="@/assets/docs/betterbond-personal-loans.pdf">
+        <a href="/betterbond-personal-loan-offers.pdf" download>
           <button>Download Designs</button>
         </a>
       </div>
@@ -204,7 +201,7 @@
           customer is redirected back to Monify and presented with a post-submit
           modal.
         </p>
-        <a download href="@/assets/docs/monify-personal-loans.pdf">
+        <a download href="/monify-personal-loans.pdf">
           <button>Download Designs</button>
         </a>
       </div>
@@ -290,8 +287,8 @@
           Government Employees) platform.
         </p>
 
-        <a download href="@/assets/docs/payrun.pdf">
-          <button>Download Designs</button>
+        <a download href="/payrun.pdf">
+          <button>Download Design</button>
         </a>
       </div>
     </article>
