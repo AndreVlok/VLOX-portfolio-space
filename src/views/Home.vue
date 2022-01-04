@@ -11,9 +11,9 @@
           <span class="underline">Welcome, I'm Andre!</span> 👋
         </h3>
         <img
-          class="round"
+          class="round profile"
           style="position: absolute; right: 1rem; top: 2rem; width: 90px; border: .27rem solid #ff4c42;"
-          src="@/assets/images/andre-vlok.jpg"
+          src="@/assets/images/andre-vlok-min.jpg"
           alt=""
         />
       </div>
@@ -49,7 +49,7 @@
       <InfoSections />
     </main>
     <hr />
-    <div class="center"><p>&copy; VLOX 2021</p></div>
+    <div class="center"><p>&copy; VLOX 2022</p></div>
   </div>
 </template>
 <script>
@@ -78,8 +78,15 @@ export default {
   }
 }
 .welcomer {
-  @include respond(mobitab) {
-    width: 180px;
+  @include respond(mobile) {
+    width: 150px;
+  }
+}
+.profile {
+  @include respond(mobile) {
+    width: 70px !important;
+    top: 3.5rem !important;
+    right: 1.5rem !important;
   }
 }
 main {

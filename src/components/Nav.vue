@@ -1,8 +1,8 @@
 <template>
   <div>
     <div
-      style="border: 2px solid #ccc; margin: 0rem auto 2rem auto; width: 50%;"
-      class="round nav w-mar-bottom grid_1-4"
+      style="border: 2px solid #ccc; margin: 0rem auto 2rem auto; width: 77%;"
+      class="round nav w-mar-bottom grid_1-5"
     >
       <div
         v-for="tab in tabs"
@@ -23,6 +23,7 @@ import Services from "./Services";
 import Contact from "./Contact";
 import Work from "./Work";
 import About from "./About";
+import Rates from "./Rates";
 
 export default {
   components: {
@@ -30,11 +31,12 @@ export default {
     Work,
     Services,
     About,
+    Rates,
   },
   data() {
     return {
       currentTab: "Contact",
-      tabs: ["Contact", "About", "Work", "Services"],
+      tabs: ["Contact", "About", "Work", "Services", "Rates"],
     };
   },
   computed: {
@@ -54,7 +56,7 @@ h6 {
 }
 .active > h6 {
   width: min-content;
-  background-color: $color-2;
+  background-color: $color-3;
   color: $white;
 }
 </style>

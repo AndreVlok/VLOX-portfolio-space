@@ -9,7 +9,7 @@
         <perfect-scrollbar>
           <img
             style="width:100% !important;"
-            src="@/assets/images/auctioninc-tswhane-page.png"
+            src="@/assets/images/auctioninc-tswhane-page-min.png"
             alt="AuctionInc Tswhane Landing Page"
           />
         </perfect-scrollbar>
@@ -84,7 +84,7 @@
         <perfect-scrollbar class="round">
           <img
             style="width:100% !important;"
-            src="@/assets/images/unfolded.png"
+            src="@/assets/images/unfolded-min.png"
             alt="unfolded"
           />
         </perfect-scrollbar>
@@ -393,68 +393,68 @@ export default {
   data() {
     return {
       slides: [
-        require("@/assets/images/betterbond-loans (1).jpg"),
-        require("@/assets/images/betterbond-loans (2).jpg"),
-        require("@/assets/images/betterbond-loans (3).jpg"),
-        require("@/assets/images/betterbond-loans (4).jpg"),
-        require("@/assets/images/betterbond-loans (5).jpg"),
+        require("@/assets/images/betterbond-loans (1)-min.jpg"),
+        require("@/assets/images/betterbond-loans (2)-min.jpg"),
+        require("@/assets/images/betterbond-loans (3)-min.jpg"),
+        require("@/assets/images/betterbond-loans (4)-min.jpg"),
+        require("@/assets/images/betterbond-loans (5)-min.jpg"),
       ],
       twoslides: [
-        require("@/assets/images/monify-loans (1).jpg"),
-        require("@/assets/images/monify-loans (2).jpg"),
-        require("@/assets/images/monify-loans (3).jpg"),
-        require("@/assets/images/monify-loans (4).jpg"),
-        require("@/assets/images/monify-loans (5).jpg"),
+        require("@/assets/images/monify-loans (1)-min.jpg"),
+        require("@/assets/images/monify-loans (2)-min.jpg"),
+        require("@/assets/images/monify-loans (3)-min.jpg"),
+        require("@/assets/images/monify-loans (4)-min.jpg"),
+        require("@/assets/images/monify-loans (5)-min.jpg"),
       ],
       threeslides: [
-        require("@/assets/images/flipit (1).png"),
-        require("@/assets/images/flipit (2).png"),
-        require("@/assets/images/flipit (3).png"),
-        require("@/assets/images/flipit (4).png"),
-        require("@/assets/images/flipit (5).png"),
-        require("@/assets/images/flipit (6).png"),
-        require("@/assets/images/flipit (7).png"),
-        require("@/assets/images/flipit (8).png"),
+        require("@/assets/images/flipit (1)-min.png"),
+        require("@/assets/images/flipit (2)-min.png"),
+        require("@/assets/images/flipit (3)-min.png"),
+        require("@/assets/images/flipit (4)-min.png"),
+        require("@/assets/images/flipit (5)-min.png"),
+        require("@/assets/images/flipit (6)-min.png"),
+        require("@/assets/images/flipit (7)-min.png"),
+        require("@/assets/images/flipit (8)-min.png"),
       ],
       fourslides: [
-        require("@/assets/images/InstaBank/instabank (1).jpg"),
-        require("@/assets/images/InstaBank/instabank (2).jpg"),
-        require("@/assets/images/InstaBank/instabank (3).jpg"),
-        require("@/assets/images/InstaBank/instabank (4).jpg"),
-        require("@/assets/images/InstaBank/instabank (5).jpg"),
-        require("@/assets/images/InstaBank/instabank (6).jpg"),
-        require("@/assets/images/InstaBank/instabank (7).jpg"),
-        require("@/assets/images/InstaBank/instabank (8).jpg"),
-        require("@/assets/images/InstaBank/instabank (9).jpg"),
+        require("@/assets/images/InstaBank/instabank (1)-min.jpg"),
+        require("@/assets/images/InstaBank/instabank (2)-min.jpg"),
+        require("@/assets/images/InstaBank/instabank (3)-min.jpg"),
+        require("@/assets/images/InstaBank/instabank (4)-min.jpg"),
+        require("@/assets/images/InstaBank/instabank (5)-min.jpg"),
+        require("@/assets/images/InstaBank/instabank (6)-min.jpg"),
+        require("@/assets/images/InstaBank/instabank (7)-min.jpg"),
+        require("@/assets/images/InstaBank/instabank (8)-min.jpg"),
+        require("@/assets/images/InstaBank/instabank (9)-min.jpg"),
       ],
       fiveslides: [
-        require("@/assets/images/payrun (1).jpg"),
-        require("@/assets/images/payrun (2).jpg"),
-        require("@/assets/images/payrun (3).jpg"),
-        require("@/assets/images/payrun (4).jpg"),
-        require("@/assets/images/payrun (5).jpg"),
-        require("@/assets/images/payrun (6).jpg"),
-        require("@/assets/images/payrun (7).jpg"),
+        require("@/assets/images/payrun (1)-min.jpg"),
+        require("@/assets/images/payrun (2)-min.jpg"),
+        require("@/assets/images/payrun (3)-min.jpg"),
+        require("@/assets/images/payrun (4)-min.jpg"),
+        require("@/assets/images/payrun (5)-min.jpg"),
+        require("@/assets/images/payrun (6)-min.jpg"),
+        require("@/assets/images/payrun (7)-min.jpg"),
       ],
       sixslides: [
-        require("@/assets/images/Sanlam/Sanlam - 1.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 2.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 3.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 4.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 5.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 6.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 7.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 8.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 9.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 10.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 11.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 12.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 13.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 14.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 15.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 16.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 17.jpg"),
-        require("@/assets/images/Sanlam/Sanlam - 18.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 1-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 2-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 3-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 4-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 5-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 6-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 7-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 8-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 9-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 10-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 11-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 12-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 13-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 14-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 15-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 16-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 17-min.jpg"),
+        require("@/assets/images/Sanlam/Sanlam - 18-min.jpg"),
       ],
     };
   },

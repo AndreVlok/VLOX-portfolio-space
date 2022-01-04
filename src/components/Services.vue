@@ -1,8 +1,5 @@
 <template>
   <div class="content-container">
-    <h3 class="txt-center heading-black">
-      <i>Hourly Rate = $30.00</i>
-    </h3>
     <div class="grid_1-2" style="margin-bottom: 3rem;">
       <!-- STEP 1 -->
       <article class="n-pad">
@@ -27,13 +24,14 @@
           <img style="width: 37px;" src="@/assets/icons/step-2.svg" />
           <h3><b>STEP 2</b></h3>
         </div>
-        <h4>Project Plan & Quotes</h4>
+        <h4>Project Plan & Quote</h4>
         <p>
           After our consultation, I'll plan the project to determine timelines,
-          the accompanying quote as well as summarize our consultation to what
-          is important and outline the best approach to execute the project.
-          This is communicated via email.
+          the accompanying quote as well as summarize our consultation and
+          outline the best approach to execute the project. This is communicated
+          via email.
         </p>
+        <p>A comb</p>
       </article>
 
       <!-- STEP 3 -->
@@ -148,40 +146,6 @@
         </p>
       </article>
     </div>
-
-    <!-- Additional Benefits -->
-    <article class="n-pad color-2-border">
-      <h4 class="txt-center"><b>Additional Benefits</b></h4>
-      <table class="round">
-        <tr>
-          <td>Minimal Hosting Costs</td>
-        </tr>
-        <tr>
-          <td>Deployment Setup & Administration</td>
-        </tr>
-        <tr>
-          <td>Ongoing Domain Name Implementation & Management</td>
-        </tr>
-        <tr>
-          <td>Ultra Fast Page Delivery via Netlify CDN</td>
-        </tr>
-        <tr>
-          <td>
-            Private & Secure Bitbucket & GitHub Code Repositories
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Environments for development, staging and production
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Application Usability Testing
-          </td>
-        </tr>
-      </table>
-    </article>
   </div>
 </template>
 

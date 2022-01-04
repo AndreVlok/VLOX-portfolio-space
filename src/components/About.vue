@@ -3,7 +3,7 @@
     <article class="n-pad black-border-bottom">
       <img
         class="round profile-image n-mar-right n-mar-bottom"
-        src="@/assets/images/andre-vlok.jpg"
+        src="@/assets/images/andre-vlok-min.jpg"
         alt="Andre Vlok"
       />
       <div>

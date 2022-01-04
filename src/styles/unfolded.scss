@@ -289,18 +289,8 @@ td {
   }
 }
 
-th {
-  font-weight: bold !important;
-  &:hover {
-    transition: $transition;
-    background-color: unset !important;
-    text-decoration: underline !important;
-  }
-}
-
 h5,
-h6,
-th {
+h6 {
   @include typography();
   @include respond(mobile) {
     font-size: calc(18px + 2 * (100vw - 320px) / 480);
@@ -321,6 +311,26 @@ th {
   &:hover {
     transition: $transition;
   }
+}
+
+th {
+  @include typography();
+  @include respond(mobile) {
+    font-size: calc(18px + 2 * (100vw - 320px) / 480);
+  }
+  @include respond(tablet) {
+    font-size: calc(18px + 2 * (100vw - 480px) / 768);
+  }
+  @include respond(laptop) {
+    font-size: calc(18px + 2 * (100vw - 768px) / 1366);
+  }
+  @include respond(desktop) {
+    font-size: calc(18px + 4 * (100vw - 1366px) / 2400);
+  }
+  white-space: nowrap;
+  width: min-content;
+  margin: 0;
+  font-weight: bold !important;
 }
 
 // Normal Links
@@ -781,9 +791,9 @@ table {
   width: 100%;
 }
 
-th {
-  border-bottom: 1px solid $black;
-}
+// th {
+//   border-bottom: 1px solid $black;
+// }
 
 td,
 th {
