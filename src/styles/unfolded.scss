@@ -1,93 +1,119 @@
-@import url("https://use.typekit.net/umh1qeu.css");
+// Feel free to replace the imports and variables below with your own.
+@import url("https://use.typekit.net/bxw1frh.css");
 
+// Variable
 $primary-font: co-text, sans-serif !important;
-$secondary-font: co-text, sans-serif !important;
+// Class
+.primary-font {
+  font-family: $primary-font;
+}
 
-$transition: all 0.1s ease;
+// Variable
+$secondary-font: co-headline, sans-serif !important;
+// Class
+.secondary-font {
+  font-family: $secondary-font;
+}
 
+// Variable
 $white: #fefeff;
-$black: #383536;
-$grey: rgb(240, 240, 240);
-
-$color-1: #78e0a2;
-$color-2: #7f51d0;
-$color-4: #ffd91c;
-$color-3: #ff4c42;
-
-$background-color: $white;
-$text-color: $black;
-
+// Class
 .white {
   color: $white;
 }
-.black {
-  color: $black;
-}
-.grey {
-  color: $grey;
-}
-
-.color-1 {
-  color: $color-1;
-}
-.color-2 {
-  color: $color-2;
-}
-.color-3 {
-  color: $color-3;
-}
-.color-4 {
-  color: $color-4;
-}
-
 .bg-white {
   background-color: $white;
 }
+
+// Variable
+$black: #323031;
+// Class
+.black {
+  color: $black;
+}
 .bg-black {
   background-color: $black;
+}
+
+// Variable
+$grey: #cccccc;
+// Class
+.grey {
+  color: $grey;
 }
 .bg-grey {
   background-color: $grey;
 }
 
-.bg-color-1 {
-  background-color: $color-1;
+// Variable
+$clr-1: #79e7a5;
+// Class
+.clr-1 {
+  color: $clr-1;
 }
-.bg-color-2 {
-  background-color: $color-2;
-}
-.bg-color-3 {
-  background-color: $color-3;
-}
-.bg-color-4 {
-  background-color: $color-4;
+.bg-clr-1 {
+  background-color: $clr-1;
 }
 
-.secondary-font {
-  font-family: $secondary-font;
+// Variable
+$clr-2: #505cbc;
+// Class
+.clr-2 {
+  color: $clr-2;
+}
+.bg-clr-2 {
+  background-color: $clr-2;
 }
 
-@mixin typography {
-  line-height: 150%;
-  font-family: $primary-font;
-  letter-spacing: normal;
-  font-display: swap;
-  color: $text-color;
-  font-style: normal;
-  font-weight: normal;
+// Variable
+$clr-3: #ff4c42;
+// Class
+.clr-3 {
+  color: $clr-3;
+}
+.bg-clr-3 {
+  background-color: $clr-3;
 }
 
+// Variable
+$clr-4: #ffc014;
+// Class
+.clr-4 {
+  color: $clr-4;
+}
+.bg-clr-4 {
+  background-color: $clr-4;
+}
+
+// Other variables used throughout the unfolded framework
+$txt-clr: $black;
+$bg-clr: $white;
+$transition: all 0.1s ease;
+
+// Global Rules
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Rules that apply to the HTML & Body tags
+html,
+body {
+  scroll-behavior: smooth;
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: $bg-clr;
+}
+
+// Media queried responsive breakpoints used throughout the unfolded framework
 @mixin respond($breakpoint) {
-  @if $breakpoint == mobitab {
-    @media screen and (max-width: 768px) {
-      @content;
-    }
-  }
-  @if $breakpoint == lapdesk {
-    @media screen and (min-width: 768px) {
-      @content;
-    }
-  }
   @if $breakpoint == mobile {
     @media screen and (max-width: 480px) {
       @content;
@@ -95,6 +121,12 @@ $text-color: $black;
   }
   @if $breakpoint == tablet {
     @media screen and (min-width: 480px) and (max-width: 768px) {
+      @content;
+    }
+  }
+  // Mobitab includes both mobile and tablet screen sizes
+  @if $breakpoint == mobitab {
+    @media screen and (max-width: 768px) {
       @content;
     }
   }
@@ -108,42 +140,37 @@ $text-color: $black;
       @content;
     }
   }
+  // Lapdesk includes both laptop and desktop screen sizes
+  @if $breakpoint == lapdesk {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
 }
 
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  scroll-behavior: smooth;
-  width: 100vw;
-  height: auto;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-  background-color: $background-color;
-}
-
+// The mixin for our grid system.
 @mixin grid {
   display: grid;
   @include respond(mobile) {
-    grid-gap: 3vw;
+    grid-gap: 1vw;
   }
-  @media screen and (min-width: 480px) {
-    grid-gap: 2vw;
+
+  @include respond(tablet) {
+    grid-gap: 0.87vw;
+  }
+
+  @include respond(laptop) {
+    grid-gap: 1.35vw;
+  }
+
+  @include respond(desktop) {
+    grid-gap: 1vw;
   }
 }
 
 @mixin rounder {
   border-radius: 1rem;
 }
-
 .rounder {
   @include rounder;
 }
@@ -151,7 +178,6 @@ body {
 @mixin round {
   border-radius: 0.5rem;
 }
-
 .round {
   @include round;
 }
@@ -161,7 +187,6 @@ body {
   -webkit-box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
   -moz-box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
 }
-
 .shadow {
   @include shadow;
 }
@@ -178,9 +203,219 @@ body {
     -moz-box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
   }
 }
-
 .shadower {
   @include shadower;
+}
+
+// Typography mixin, included in rules to define global typographic declarations
+@mixin typography {
+  line-height: 150%;
+  font-family: $primary-font;
+  letter-spacing: normal;
+  font-display: swap;
+  color: $txt-clr;
+  font-style: normal;
+  font-weight: normal;
+}
+
+// A responsive nav, that aligns it's children (nav-items) as you place them.
+nav {
+  @include shadow;
+  background-color: $bg-clr;
+  border-bottom: 1px solid $grey;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  @include respond(mobile) {
+    display: block;
+  }
+}
+
+// A simple footer
+footer {
+  background-color: $bg-clr;
+  border-top: 1px solid $grey;
+}
+
+// Responsive rules for our nav & footer
+nav,
+footer {
+  @include respond(mobile) {
+    padding: 1vh 4vw;
+  }
+  @include respond(tablet) {
+    padding: 1vh 6vw;
+  }
+  @include respond(laptop) {
+    padding: 1vh 8vw;
+  }
+  @include respond(desktop) {
+    padding: 1vh 10vw;
+  }
+  margin: auto;
+  width: 100vw;
+}
+
+// Responsive Header container, usually positioned at the top of the page, below the nav
+header {
+  @include respond(mobile) {
+    padding: 9vh 3vw;
+  }
+  @include respond(tablet) {
+    padding: 9vh 11vw;
+  }
+  @include respond(laptop) {
+    padding: 9vh 16.6vw;
+  }
+  @include respond(desktop) {
+    padding: 11vh 20vw;
+  }
+  margin: auto;
+  display: block;
+}
+
+// Responsive Main container, usually positioned between the header and footer
+main {
+  @include respond(mobile) {
+    padding: 3vh 3vw;
+  }
+  @include respond(tablet) {
+    padding: 3vh 11vw;
+  }
+  @include respond(laptop) {
+    padding: 3vh 20vw;
+  }
+  @include respond(desktop) {
+    padding: 6vh 14vw;
+  }
+  margin: auto;
+  display: block;
+  height: auto;
+}
+
+// Sectional containers that holds content for different sections.
+section {
+  margin: auto;
+  padding: auto;
+  display: block;
+}
+
+// Article containers, styled with a slight shadow to give them the effect of material design cards.
+article {
+  @include shadow;
+  margin: auto;
+  padding: auto;
+  display: block;
+  background-color: $bg-clr;
+  width: 100%;
+}
+
+// Div container
+div {
+  display: block;
+}
+
+// Span container
+span {
+  margin: auto;
+}
+
+// Use this class to create a small responsive container
+.sml-container {
+  max-width: 360px;
+  width: 100%;
+}
+
+// Use this class to create a medium responsive container
+.med-container {
+  max-width: 480px;
+  width: 100%;
+}
+
+// Use this class to create a large responsive container
+.lrg-container {
+  max-width: 768px;
+  width: 100%;
+}
+
+// iFrame Element
+iframe {
+  display: block;
+  outline: none;
+}
+
+// Form Element
+form {
+  padding: auto;
+  margin: auto;
+  display: block;
+}
+
+// Figure element
+figure {
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto !important;
+  display: block;
+  padding: auto;
+}
+
+// Image Element
+img {
+  display: inline-block;
+}
+
+// Figcaption element used to caption image wrapped in a figure containers
+figcaption {
+  @include typography();
+  font-size: calc(12px + 2 * (100vw - 320px) / 2400);
+  display: inline-block;
+  text-align: center;
+}
+
+// Table Element
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+// Table Data & Head Elements
+td,
+th {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+// Table Row Elements
+tr:nth-child(even) {
+  background-color: $grey;
+}
+
+// Horizontal Rule
+hr {
+  margin: auto;
+}
+
+// Wrap around copy to style it in bold
+b {
+  display: inline;
+  font-weight: bold;
+}
+
+// Wrap around copy to style it in italics
+i {
+  font-style: italic;
+}
+
+// Line Break element
+br {
+  margin: auto;
+}
+
+// Add the underline class to copy to style it underlined
+.underline {
+  text-decoration: underline;
 }
 
 // Header Heading
@@ -269,6 +504,9 @@ h4 {
 }
 
 p,
+label,
+ul,
+li,
 td {
   @include typography();
   @include respond(mobile) {
@@ -313,6 +551,30 @@ h6 {
   }
 }
 
+// Normal Links
+h5 {
+  color: $clr-2;
+  padding: 0vh 0vw !important;
+  &:hover {
+    transition: $transition;
+    background-color: unset !important;
+    text-decoration: underline dashed !important;
+    color: $clr-2;
+  }
+}
+
+// Nav Links
+h6 {
+  padding: 0 0.7rem;
+  margin: 1rem auto !important;
+  @include rounder();
+  &:hover {
+    transition: $transition;
+    background-color: $clr-1;
+    color: $white;
+  }
+}
+
 th {
   @include typography();
   @include respond(mobile) {
@@ -333,37 +595,13 @@ th {
   font-weight: bold !important;
 }
 
-// Normal Links
-h5 {
-  color: $color-2;
-  padding: 0vh 0vw !important;
-  &:hover {
-    transition: $transition;
-    background-color: unset !important;
-    text-decoration: underline dashed !important;
-    color: $color-2;
-  }
-}
-
-// Nav Links
-h6 {
-  padding: 0 0.7rem;
-  margin: 1rem auto !important;
-  @include rounder();
-  &:hover {
-    transition: $transition;
-    background-color: $color-1;
-    color: $white;
-  }
-}
-
-.tab-outlined {
+.outlined-link {
   border: 2px solid $white;
   &:hover {
-    color: $color-2;
+    color: $clr-2;
     transition: $transition;
-    border: 2px solid $color-1;
-    background-color: $background-color;
+    border: 2px solid $clr-1;
+    background-color: $bg-clr;
   }
 }
 
@@ -384,13 +622,12 @@ a:visited {
 }
 
 router-link {
-  background-color: $background-color;
+  background-color: $bg-clr;
 }
 
 button {
   @include typography;
   @include shadower;
-  @include round;
   @include respond(mobile) {
     font-size: calc(18px + 2 * (100vw - 320px) / 480);
   }
@@ -417,7 +654,7 @@ button {
   }
 }
 
-.button-outlined {
+.btn-outlined {
   background-color: $white;
   color: $black;
   border: 2px solid $black;
@@ -429,102 +666,102 @@ button {
   }
 }
 
-.button-1 {
-  border: 2px solid $color-1;
-  background-color: $color-1;
+.btn-1 {
+  border: 2px solid $clr-1;
+  background-color: $clr-1;
   color: $white;
   &:hover {
     transition: $transition;
     background-color: $white;
-    color: $color-1;
-    border: 2px solid $color-1;
+    color: $clr-1;
+    border: 2px solid $clr-1;
   }
 }
 
-.button-1-outlined {
+.btn-1-outlined {
   background-color: $white;
-  color: $color-2;
-  border: 2px solid $color-1;
+  color: $clr-2;
+  border: 2px solid $clr-1;
   &:hover {
     transition: $transition;
-    border: 2px solid $color-1;
-    background-color: $color-1;
+    border: 2px solid $clr-1;
+    background-color: $clr-1;
     color: $white;
   }
 }
 
-.button-2 {
-  border: 2px solid $color-2;
-  background-color: $color-2;
+.btn-2 {
+  border: 2px solid $clr-2;
+  background-color: $clr-2;
   color: $white;
   &:hover {
     transition: $transition;
     background-color: $white;
-    color: $color-2;
-    border: 2px solid $color-2;
+    color: $clr-2;
+    border: 2px solid $clr-2;
   }
 }
 
-.button-2-outlined {
+.btn-2-outlined {
   background-color: $white;
-  color: $color-2;
-  border: 2px solid $color-2;
+  color: $clr-2;
+  border: 2px solid $clr-2;
   &:hover {
     transition: $transition;
-    border: 2px solid $color-2;
-    background-color: $color-2;
+    border: 2px solid $clr-2;
+    background-color: $clr-2;
     color: $white;
   }
 }
-.button-3 {
-  border: 2px solid $color-3;
-  background-color: $color-3;
+.btn-3 {
+  border: 2px solid $clr-3;
+  background-color: $clr-3;
   color: $white;
   &:hover {
     transition: $transition;
     background-color: $white;
-    color: $color-3;
-    border: 2px solid $color-3;
+    color: $clr-3;
+    border: 2px solid $clr-3;
   }
 }
 
-.button-3-outlined {
+.btn-3-outlined {
   background-color: $white;
-  color: $color-2;
-  border: 2px solid $color-3;
+  color: $clr-2;
+  border: 2px solid $clr-3;
   &:hover {
     transition: $transition;
-    border: 2px solid $color-3;
-    background-color: $color-3;
+    border: 2px solid $clr-3;
+    background-color: $clr-3;
     color: $white;
   }
 }
 
-.button-4 {
-  border: 2px solid $color-4;
-  background-color: $color-4;
+.btn-4 {
+  border: 2px solid $clr-4;
+  background-color: $clr-4;
   color: $white;
   &:hover {
     transition: $transition;
     background-color: $white;
-    color: $color-4;
-    border: 2px solid $color-4;
+    color: $clr-4;
+    border: 2px solid $clr-4;
   }
 }
 
-.button-4-outlined {
+.btn-4-outlined {
   background-color: $white;
-  color: $color-2;
-  border: 2px solid $color-4;
+  color: $clr-2;
+  border: 2px solid $clr-4;
   &:hover {
     transition: $transition;
-    border: 2px solid $color-4;
-    background-color: $color-4;
+    border: 2px solid $clr-4;
+    background-color: $clr-4;
     color: $white;
   }
 }
 
-.button-white {
+.btn-white {
   background-color: $white;
   color: $black;
   border: 2px solid $white;
@@ -534,193 +771,6 @@ button {
     background-color: $white;
     color: $black;
   }
-}
-
-label {
-  @include typography();
-  @include respond(mobile) {
-    font-size: calc(16px + 2 * (100vw - 320px) / 480);
-  }
-  @include respond(tablet) {
-    font-size: calc(16px + 2 * (100vw - 480px) / 768);
-  }
-  @include respond(laptop) {
-    font-size: calc(16px + 2 * (100vw - 768px) / 1366);
-  }
-  @include respond(desktop) {
-    font-size: calc(16px + 4 * (100vw - 1366px) / 2400);
-  }
-}
-
-ul {
-  @include respond(mobile) {
-    padding-left: calc(16px + 2 * (100vw - 320px) / 480);
-  }
-  @include respond(tablet) {
-    padding-left: calc(16px + 2 * (100vw - 480px) / 768);
-  }
-  @include respond(laptop) {
-    padding-left: calc(16px + 2 * (100vw - 768px) / 1366);
-  }
-  @include respond(desktop) {
-    padding-left: calc(16px + 4 * (100vw - 1366px) / 2400);
-  }
-}
-
-li {
-  @include typography();
-  @include respond(mobile) {
-    font-size: calc(16px + 2 * (100vw - 320px) / 480);
-  }
-  @include respond(tablet) {
-    font-size: calc(16px + 2 * (100vw - 480px) / 768);
-  }
-  @include respond(laptop) {
-    font-size: calc(16px + 2 * (100vw - 768px) / 1366);
-  }
-  @include respond(desktop) {
-    font-size: calc(16px + 4 * (100vw - 1366px) / 2400);
-  }
-}
-
-b {
-  display: inline;
-  font-weight: bold;
-}
-
-i {
-  font-style: italic;
-}
-
-nav {
-  @include shadow;
-  background-color: $background-color;
-  border-bottom: 1px solid $grey;
-  position: fixed;
-  top: 0;
-  z-index: 3;
-  display: flex;
-  @include respond(mobile) {
-    display: block;
-  }
-}
-
-footer {
-  background-color: $background-color;
-  border-top: 1px solid $grey;
-}
-
-nav,
-footer {
-  @include respond(mobile) {
-    padding: 1vh 4vw;
-  }
-  @include respond(tablet) {
-    padding: 1vh 6vw;
-  }
-  @include respond(laptop) {
-    padding: 1vh 8vw;
-  }
-  @include respond(desktop) {
-    padding: 1vh 10vw;
-  }
-  margin: auto;
-  width: 100vw;
-}
-
-header {
-  @include respond(mobile) {
-    padding: 9vh 9vw;
-  }
-  @include respond(tablet) {
-    padding: 9vh 11vw;
-  }
-  @include respond(laptop) {
-    padding: 9vh 16.6vw;
-  }
-  @include respond(desktop) {
-    padding: 11vh 20vw;
-  }
-  margin: auto;
-  display: block;
-}
-
-main {
-  @include respond(mobile) {
-    padding: 9vh 3vw;
-  }
-  @include respond(tablet) {
-    padding: 9vh 11vw;
-  }
-  @include respond(laptop) {
-    padding: 9vh 20vw;
-  }
-  @include respond(desktop) {
-    padding: 11vh 14vw;
-  }
-  margin: auto;
-  display: block;
-  height: auto;
-}
-
-section {
-  margin: auto;
-  padding: auto;
-  display: block;
-}
-
-article {
-  @include shadow;
-  @include round;
-  margin: auto;
-  padding: auto;
-  display: block;
-}
-
-div {
-  display: block;
-}
-
-form {
-  padding: auto;
-  margin: auto;
-  display: block;
-}
-
-span {
-  margin: auto;
-}
-
-iframe {
-  display: block;
-  outline: none;
-}
-
-figure {
-  width: fit-content;
-  height: fit-content;
-  margin: 0 auto !important;
-  display: block;
-  padding: auto;
-}
-
-figcaption {
-  @include typography();
-  font-size: calc(12px + 2 * (100vw - 320px) / 2400);
-  display: inline-block;
-  text-align: center;
-}
-
-img {
-  display: inline-block;
-}
-
-hr {
-  margin: auto;
-}
-
-br {
-  margin: auto;
 }
 
 input,
@@ -741,7 +791,7 @@ option {
     font-size: calc(16px + 4 * (100vw - 1366px) / 2400);
   }
   border-radius: 5px;
-  background-color: $background-color;
+  background-color: $bg-clr;
   padding: 0.3rem 0.7rem;
   margin: 0.25rem 0 1rem 0;
   border: none;
@@ -755,694 +805,35 @@ textarea:focus,
 select:focus,
 option:focus {
   outline: none !important;
-  border-left: 2px solid $color-2;
-  border-top: 1px solid $color-2;
+  border-left: 2px solid $clr-2;
+  border-top: 1px solid $clr-2;
   background-color: $grey;
   border-radius: 5px;
 }
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: $text-color;
+  color: $txt-clr;
   opacity: 0.5;
   font: $secondary-font;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: $text-color;
+  color: $txt-clr;
   opacity: 0.5;
   font: $secondary-font;
 }
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: $text-color;
+  color: $txt-clr;
   opacity: 0.5;
   font: $secondary-font;
 }
 :-moz-placeholder {
   /* Firefox 18- */
-  color: $text-color;
+  color: $txt-clr;
   opacity: 0.5;
   font: $secondary-font;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-// th {
-//   border-bottom: 1px solid $black;
-// }
-
-td,
-th {
-  text-align: left;
-  padding: 0.5rem;
-}
-
-tr:nth-child(even) {
-  background-color: $grey;
-}
-
-.grid_12 {
-  @include grid;
-  grid: auto / repeat(12, 1fr);
-}
-
-.grid_11-12 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(11, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(12, 1fr);
-  }
-}
-.grid_10-12 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(10, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(12, 1fr);
-  }
-}
-.grid_9-12 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(9, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(12, 1fr);
-  }
-}
-.grid_8-12 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(8, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(12, 1fr);
-  }
-}
-.grid_7-12 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(7, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(12, 1fr);
-  }
-}
-.grid_6-12 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(6, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(12, 1fr);
-  }
-}
-.grid_5-12 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(5, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(12, 1fr);
-  }
-}
-.grid_4-12 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(4, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(12, 1fr);
-  }
-}
-.grid_3-12 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(3, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(12, 1fr);
-  }
-}
-.grid_2-12 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(2, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(12, 1fr);
-  }
-}
-.grid_1-12 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(1, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(12, 1fr);
-  }
-}
-.grid_11 {
-  @include grid;
-  grid: auto / repeat(11, 1fr);
-}
-.grid_10-11 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(10, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(11, 1fr);
-  }
-}
-.grid_9-11 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(9, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(11, 1fr);
-  }
-}
-.grid_8-11 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(8, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(11, 1fr);
-  }
-}
-.grid_7-11 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(7, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(11, 1fr);
-  }
-}
-.grid_6-11 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(6, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(11, 1fr);
-  }
-}
-.grid_5-11 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(5, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(11, 1fr);
-  }
-}
-.grid_4-11 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(4, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(11, 1fr);
-  }
-}
-.grid_3-11 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(3, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(11, 1fr);
-  }
-}
-.grid_2-11 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(2, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(11, 1fr);
-  }
-}
-.grid_1-11 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(1, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(11, 1fr);
-  }
-}
-.grid_10 {
-  @include grid;
-  grid: auto / repeat(10, 1fr);
-}
-.grid_9-10 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(9, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(10, 1fr);
-  }
-}
-.grid_8-10 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(8, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(10, 1fr);
-  }
-}
-.grid_7-10 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(7, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(10, 1fr);
-  }
-}
-.grid_6-10 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(6, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(10, 1fr);
-  }
-}
-.grid_5-10 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(5, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(10, 1fr);
-  }
-}
-.grid_4-10 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(4, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(10, 1fr);
-  }
-}
-.grid_3-10 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(3, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(10, 1fr);
-  }
-}
-.grid_2-10 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(2, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(10, 1fr);
-  }
-}
-.grid_1-10 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(1, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(10, 1fr);
-  }
-}
-.grid_9 {
-  grid: auto / repeat(9, 1fr);
-}
-.grid_8-9 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(8, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(9, 1fr);
-  }
-}
-.grid_7-9 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(7, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(9, 1fr);
-  }
-}
-.grid_6-9 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(6, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(9, 1fr);
-  }
-}
-.grid_5-9 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(5, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(9, 1fr);
-  }
-}
-.grid_4-9 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(4, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(9, 1fr);
-  }
-}
-.grid_3-9 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(3, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(9, 1fr);
-  }
-}
-.grid_2-9 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(2, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(9, 1fr);
-  }
-}
-.grid_1-9 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(1, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(9, 1fr);
-  }
-}
-.grid_8 {
-  @include grid;
-  grid: auto / repeat(8, 1fr);
-}
-.grid_7-8 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(7, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(8, 1fr);
-  }
-}
-.grid_6-8 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(6, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(8, 1fr);
-  }
-}
-.grid_5-8 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(5, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(8, 1fr);
-  }
-}
-.grid_4-8 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(4, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(8, 1fr);
-  }
-}
-.grid_3-8 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(3, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(8, 1fr);
-  }
-}
-.grid_2-8 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(2, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(8, 1fr);
-  }
-}
-.grid_1-8 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(1, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(8, 1fr);
-  }
-}
-.grid_7 {
-  @include grid;
-  grid: auto / repeat(7, 1fr);
-}
-.grid_6-7 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(6, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(7, 1fr);
-  }
-}
-.grid_5-7 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(5, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(7, 1fr);
-  }
-}
-.grid_4-7 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(4, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(7, 1fr);
-  }
-}
-.grid_3-7 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(3, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(7, 1fr);
-  }
-}
-.grid_2-7 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(2, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(7, 1fr);
-  }
-}
-.grid_1-7 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(1, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(7, 1fr);
-  }
-}
-.grid_6 {
-  @include grid;
-  grid: auto / repeat(6, 1fr);
-}
-.grid_5-6 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(5, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(6, 1fr);
-  }
-}
-.grid_4-6 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(4, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(6, 1fr);
-  }
-}
-.grid_3-6 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(3, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(6, 1fr);
-  }
-}
-.grid_2-6 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(2, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(6, 1fr);
-  }
-}
-.grid_1-6 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(1, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(6, 1fr);
-  }
-}
-.grid_5 {
-  @include grid;
-  grid: auto / repeat(5, 1fr);
-}
-.grid_4-5 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(4, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(5, 1fr);
-  }
-}
-.grid_3-5 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(3, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(5, 1fr);
-  }
-}
-.grid_2-5 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(2, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(5, 1fr);
-  }
-}
-.grid_1-5 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(1, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(5, 1fr);
-  }
-}
-.grid_4 {
-  @include grid;
-  grid: auto / repeat(4, 1fr);
-}
-.grid_3-4 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(3, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(4, 1fr);
-  }
-}
-.grid_2-4 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(2, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(4, 1fr);
-  }
-}
-.grid_1-4 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(1, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(4, 1fr);
-  }
-}
-.grid_3 {
-  @include grid;
-  grid: auto / repeat(3, 1fr);
-}
-.grid_2-3 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(2, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(3, 1fr);
-  }
-}
-.grid_1-3 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(1, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(3, 1fr);
-  }
-}
-.grid_2 {
-  @include grid;
-  grid: auto / repeat(2, 1fr);
-}
-
-.grid_1-2 {
-  @include grid;
-  @include respond(mobitab) {
-    grid: auto / repeat(1, 1fr);
-  }
-  @include respond(lapdesk) {
-    grid: auto / repeat(2, 1fr);
-  }
 }
 
 // Narrow Padding
@@ -1538,19 +929,23 @@ tr:nth-child(even) {
 
 @mixin n-pad-x {
   @include respond(mobile) {
-    padding: auto 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
   }
 
   @include respond(tablet) {
-    padding: auto 0.87vw;
+    padding-left: 0.87vw;
+    padding-right: 0.87vw;
   }
 
   @include respond(laptop) {
-    padding: auto 1.35vw;
+    padding-left: 1.35vw;
+    padding-right: 1.35vw;
   }
 
   @include respond(desktop) {
-    padding: auto 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
   }
 }
 
@@ -1592,6 +987,163 @@ tr:nth-child(even) {
 }
 .n-pad-y {
   @include n-pad-y;
+}
+
+// Medium Padding
+@mixin m-pad {
+  @include respond(mobile) {
+    padding: 6vw;
+  }
+
+  @include respond(tablet) {
+    padding: 5vw;
+  }
+
+  @include respond(laptop) {
+    padding: 4vw;
+  }
+
+  @include respond(desktop) {
+    padding: 2vw;
+  }
+}
+
+@mixin m-pad-top {
+  @include respond(mobile) {
+    padding-top: 6vw;
+  }
+
+  @include respond(tablet) {
+    padding-top: 5vw;
+  }
+
+  @include respond(laptop) {
+    padding-top: 4vw;
+  }
+
+  @include respond(desktop) {
+    padding-top: 2vw;
+  }
+}
+
+@mixin m-pad-right {
+  @include respond(mobile) {
+    padding-right: 6vw;
+  }
+
+  @include respond(tablet) {
+    padding-right: 5vw;
+  }
+
+  @include respond(laptop) {
+    padding-right: 4vw;
+  }
+
+  @include respond(desktop) {
+    padding-right: 2vw;
+  }
+}
+
+@mixin m-pad-bottom {
+  @include respond(mobile) {
+    padding-bottom: 6vw;
+  }
+
+  @include respond(tablet) {
+    padding-bottom: 5vw;
+  }
+
+  @include respond(laptop) {
+    padding-bottom: 4vw;
+  }
+
+  @include respond(desktop) {
+    padding-bottom: 2vw;
+  }
+}
+
+@mixin m-pad-left {
+  @include respond(mobile) {
+    padding-left: 6vw;
+  }
+
+  @include respond(tablet) {
+    padding-left: 5vw;
+  }
+
+  @include respond(laptop) {
+    padding-left: 4vw;
+  }
+
+  @include respond(desktop) {
+    padding-left: 2vw;
+  }
+}
+
+@mixin m-pad-x {
+  @include respond(mobile) {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  @include respond(tablet) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  @include respond(laptop) {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  @include respond(desktop) {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}
+
+@mixin m-pad-y {
+  @include respond(mobile) {
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+  }
+
+  @include respond(tablet) {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+
+  @include respond(laptop) {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+
+  @include respond(desktop) {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+}
+
+.m-pad {
+  @include m-pad;
+}
+.m-pad-top {
+  @include m-pad-top;
+}
+.m-pad-right {
+  @include m-pad-right;
+}
+.m-pad-bottom {
+  @include m-pad-bottom;
+}
+.m-pad-left {
+  @include m-pad-left;
+}
+.m-pad-x {
+  @include m-pad-x;
+}
+.m-pad-y {
+  @include m-pad-y;
 }
 
 // Wide Padding
@@ -1687,37 +1239,45 @@ tr:nth-child(even) {
 
 @mixin w-pad-x {
   @include respond(mobile) {
-    padding: auto 1vw;
+    padding-left: 9vw;
+    padding-right: 9vw;
   }
 
   @include respond(tablet) {
-    padding: auto 0.87vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 
   @include respond(laptop) {
-    padding: auto 1.35vw;
+    padding-left: 7vw;
+    padding-right: 7vw;
   }
 
   @include respond(desktop) {
-    padding: auto 1vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 }
 
 @mixin w-pad-y {
   @include respond(mobile) {
-    padding: 1vw auto;
+    padding-top: 9vw;
+    padding-bottom: 9vw;
   }
 
   @include respond(tablet) {
-    padding: 0.87vw auto;
+    padding-top: 8vw;
+    padding-bottom: 8vw;
   }
 
   @include respond(laptop) {
-    padding: 1.35vw auto;
+    padding-top: 7vw;
+    padding-bottom: 7vw;
   }
 
   @include respond(desktop) {
-    padding: 1vw auto;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
   }
 }
 
@@ -1892,6 +1452,153 @@ tr:nth-child(even) {
   @include n-mar-y;
 }
 
+// Medium Margin
+@mixin m-mar {
+  @include respond(mobile) {
+    margin: 6vw;
+  }
+
+  @include respond(tablet) {
+    margin: 5vw;
+  }
+
+  @include respond(laptop) {
+    margin: 4vw;
+  }
+
+  @include respond(desktop) {
+    margin: 2vw;
+  }
+}
+
+@mixin m-mar-top {
+  @include respond(mobile) {
+    margin-top: 6vw;
+  }
+
+  @include respond(tablet) {
+    margin-top: 5vw;
+  }
+
+  @include respond(laptop) {
+    margin-top: 4vw;
+  }
+
+  @include respond(desktop) {
+    margin-top: 2vw;
+  }
+}
+@mixin m-mar-right {
+  @include respond(mobile) {
+    margin-right: 6vw;
+  }
+
+  @include respond(tablet) {
+    margin-right: 5vw;
+  }
+
+  @include respond(laptop) {
+    margin-right: 4vw;
+  }
+
+  @include respond(desktop) {
+    margin-right: 2vw;
+  }
+}
+@mixin m-mar-bottom {
+  @include respond(mobile) {
+    margin-bottom: 6vw;
+  }
+
+  @include respond(tablet) {
+    margin-bottom: 5vw;
+  }
+
+  @include respond(laptop) {
+    margin-bottom: 4vw;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 2vw;
+  }
+}
+
+@mixin m-mar-left {
+  @include respond(mobile) {
+    margin-left: 6vw;
+  }
+
+  @include respond(tablet) {
+    margin-left: 5vw;
+  }
+
+  @include respond(laptop) {
+    margin-left: 4vw;
+  }
+
+  @include respond(desktop) {
+    margin-left: 2vw;
+  }
+}
+
+@mixin m-mar-y {
+  @include respond(mobile) {
+    margin: 6vw auto;
+  }
+
+  @include respond(tablet) {
+    margin: 5vw auto;
+  }
+
+  @include respond(laptop) {
+    margin: 4vw auto;
+  }
+
+  @include respond(desktop) {
+    margin: 2vw auto;
+  }
+}
+
+@mixin m-mar-x {
+  @include respond(mobile) {
+    margin: auto 6vw;
+  }
+
+  @include respond(tablet) {
+    margin: auto 5vw;
+  }
+
+  @include respond(laptop) {
+    margin: auto 4vw;
+  }
+
+  @include respond(desktop) {
+    margin: auto 2vw;
+  }
+}
+
+.m-mar {
+  @include m-mar;
+}
+.m-mar-top {
+  @include m-mar-top;
+}
+.m-mar-right {
+  @include m-mar-right;
+}
+.m-mar-bottom {
+  @include m-mar-bottom;
+}
+.m-mar-left {
+  @include m-mar-left;
+}
+.m-mar-x {
+  @include m-mar-x;
+}
+.m-mar-y {
+  @include m-mar-y;
+}
+
 // Wide Margin
 @mixin w-mar {
   @include respond(mobile) {
@@ -2039,20 +1746,179 @@ tr:nth-child(even) {
   @include w-mar-y;
 }
 
-.underline {
-  text-decoration: underline;
+.brdr-white {
+  border: 2px solid $white;
+}
+.brdr-y-white {
+  border-top: 2px solid $white;
+  border-bottom: 2px solid $white;
+}
+.brdr-x-white {
+  border-left: 2px solid $white;
+  border-right: 2px solid $white;
+}
+.brdr-top-white {
+  border-top: 2px solid $white;
+}
+.brdr-right-white {
+  border-right: 2px solid $white;
+}
+.brdr-bottom-white {
+  border-bottom: 2px solid $white;
+}
+.brdr-left-white {
+  border-left: 2px solid $white;
 }
 
-.help {
-  cursor: help;
+.brdr-black {
+  border: 2px solid $black;
 }
-.pointer {
-  cursor: pointer;
+.brdr-y-black {
+  border-top: 2px solid $black;
+  border-bottom: 2px solid $black;
+}
+.brdr-x-black {
+  border-left: 2px solid $black;
+  border-right: 2px solid $black;
+}
+.brdr-top-black {
+  border-top: 2px solid $black;
+}
+.brdr-right-black {
+  border-right: 2px solid $black;
+}
+.brdr-bottom-black {
+  border-bottom: 2px solid $black;
+}
+.brdr-left-black {
+  border-left: 2px solid $black;
 }
 
-.responsive-container {
-  max-width: 768px;
-  width: 100%;
+.brdr-grey {
+  border: 2px solid $grey;
+}
+.brdr-y-grey {
+  border-top: 2px solid $grey;
+  border-bottom: 2px solid $grey;
+}
+.brdr-x-grey {
+  border-left: 2px solid $grey;
+  border-right: 2px solid $grey;
+}
+.brdr-top-grey {
+  border-top: 2px solid $grey;
+}
+.brdr-right-grey {
+  border-right: 2px solid $grey;
+}
+.brdr-bottom-grey {
+  border-bottom: 2px solid $grey;
+}
+.brdr-left-grey {
+  border-left: 2px solid $grey;
+}
+
+.brdr-1 {
+  border: 2px solid $clr-1;
+}
+.brdr-y-1 {
+  border-top: 2px solid $clr-1;
+  border-bottom: 2px solid $clr-1;
+}
+.brdr-x-1 {
+  border-left: 2px solid $clr-1;
+  border-right: 2px solid $clr-1;
+}
+.brdr-top-1 {
+  border-top: 2px solid $clr-1;
+}
+.brdr-right-1 {
+  border-right: 2px solid $clr-1;
+}
+.brdr-bottom-1 {
+  border-bottom: 2px solid $clr-1;
+}
+.brdr-left-1 {
+  border-left: 2px solid $clr-1;
+}
+
+.brdr-2 {
+  border: 2px solid $clr-2;
+}
+.brdr-y-2 {
+  border-top: 2px solid $clr-2;
+  border-bottom: 2px solid $clr-2;
+}
+.brdr-x-2 {
+  border-left: 2px solid $clr-2;
+  border-right: 2px solid $clr-2;
+}
+.brdr-top-2 {
+  border-top: 2px solid $clr-2;
+}
+.brdr-right-2 {
+  border-right: 2px solid $clr-2;
+}
+.brdr-bottom-2 {
+  border-bottom: 2px solid $clr-2;
+}
+.brdr-left-2 {
+  border-left: 2px solid $clr-2;
+}
+
+.brdr-3 {
+  border: 2px solid $clr-3;
+}
+.brdr-y-3 {
+  border-top: 2px solid $clr-3;
+  border-bottom: 2px solid $clr-3;
+}
+.brdr-x-3 {
+  border-left: 2px solid $clr-3;
+  border-right: 2px solid $clr-3;
+}
+.brdr-top-3 {
+  border-top: 2px solid $clr-3;
+}
+.brdr-right-3 {
+  border-right: 2px solid $clr-3;
+}
+.brdr-bottom-3 {
+  border-bottom: 2px solid $clr-3;
+}
+.brdr-left-3 {
+  border-left: 2px solid $clr-3;
+}
+
+.brdr-4 {
+  border: 2px solid $clr-4;
+}
+.brdr-y-4 {
+  border-top: 2px solid $clr-4;
+  border-bottom: 2px solid $clr-4;
+}
+.brdr-x-4 {
+  border-left: 2px solid $clr-4;
+  border-right: 2px solid $clr-4;
+}
+.brdr-top-4 {
+  border-top: 2px solid $clr-4;
+}
+.brdr-right-4 {
+  border-right: 2px solid $clr-4;
+}
+.brdr-bottom-4 {
+  border-bottom: 2px solid $clr-4;
+}
+.brdr-left-4 {
+  border-left: 2px solid $clr-4;
+}
+
+.brdr-unfolded {
+  border-top: 2px solid $clr-3;
+  border-right: 2px solid $clr-2;
+  border-bottom: 2px solid $clr-4;
+  border-left: 2px solid $clr-1;
 }
 
 .txt-center {
@@ -2294,177 +2160,649 @@ tr:nth-child(even) {
   }
 }
 
-.black-border {
-  border: 2px solid $black;
-}
-.black-border-y {
-  border-top: 2px solid $black;
-  border-bottom: 2px solid $black;
-}
-.black-border-x {
-  border-left: 2px solid $black;
-  border-right: 2px solid $black;
-}
-.black-border-top {
-  border-top: 2px solid $black;
-}
-.black-border-left {
-  border-right: 2px solid $black;
-}
-.black-border-bottom {
-  border-bottom: 2px solid $black;
-}
-.black-border-right {
-  border-left: 2px solid $black;
+.help {
+  cursor: help;
 }
 
-.black-border {
-  border: 2px solid $black;
-}
-.black-border-y {
-  border-top: 2px solid $black;
-  border-bottom: 2px solid $black;
-}
-.black-border-x {
-  border-left: 2px solid $black;
-  border-right: 2px solid $black;
-}
-.black-border-top {
-  border-top: 2px solid $black;
-}
-.black-border-left {
-  border-right: 2px solid $black;
-}
-.black-border-bottom {
-  border-bottom: 2px solid $black;
-}
-.black-border-left {
-  border-left: 2px solid $black;
+.pointer {
+  cursor: pointer;
 }
 
-.grey-border {
-  border: 2px solid $grey;
+// Classes for the grid system work as follows: The prefix with underscore 'grid_' declares the grid. The first number ie. '1' declares column amount on mobitab (mobile & tablet) screen sizes, followed by a hyphen '-' and he last number ie. '2' declares column amount on lapdesk (laptop & desktop) screen sizes.
+.grid_1-2 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(1, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(2, 1fr);
+  }
 }
-.grey-border-y {
-  border-top: 2px solid $grey;
-  border-bottom: 2px solid $grey;
+.grid_2 {
+  @include grid;
+  grid: auto / repeat(2, 1fr);
 }
-.grey-border-x {
-  border-left: 2px solid $grey;
-  border-right: 2px solid $grey;
+.grid_1-3 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(1, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(3, 1fr);
+  }
 }
-.grey-border-top {
-  border-top: 2px solid $grey;
+.grid_2-3 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(2, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(3, 1fr);
+  }
 }
-.grey-border-left {
-  border-right: 2px solid $grey;
+.grid_3 {
+  @include grid;
+  grid: auto / repeat(3, 1fr);
 }
-.grey-border-bottom {
-  border-bottom: 2px solid $grey;
+.grid_1-4 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(1, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(4, 1fr);
+  }
 }
-.grey-border-left {
-  border-left: 2px solid $grey;
+.grid_2-4 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(2, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(4, 1fr);
+  }
 }
-
-.color-1-border {
-  border: 2px solid $color-1;
+.grid_3-4 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(3, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(4, 1fr);
+  }
 }
-.color-1-border-y {
-  border-top: 2px solid $color-1;
-  border-bottom: 2px solid $color-1;
+.grid_4 {
+  @include grid;
+  grid: auto / repeat(4, 1fr);
 }
-.color-1-border-x {
-  border-left: 2px solid $color-1;
-  border-right: 2px solid $color-1;
+.grid_1-5 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(1, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(5, 1fr);
+  }
 }
-.color-1-border-top {
-  border-top: 2px solid $color-1;
+.grid_2-5 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(2, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(5, 1fr);
+  }
 }
-.color-1-border-left {
-  border-right: 2px solid $color-1;
+.grid_3-5 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(3, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(5, 1fr);
+  }
 }
-.color-1-border-bottom {
-  border-bottom: 2px solid $color-1;
+.grid_4-5 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(4, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(5, 1fr);
+  }
 }
-.color-1-border-left {
-  border-left: 2px solid $color-1;
+.grid_5 {
+  @include grid;
+  grid: auto / repeat(5, 1fr);
 }
-
-.color-2-border {
-  border: 2px solid $color-2;
+.grid_1-6 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(1, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(6, 1fr);
+  }
 }
-.color-2-border-y {
-  border-top: 2px solid $color-2;
-  border-bottom: 2px solid $color-2;
+.grid_2-6 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(2, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(6, 1fr);
+  }
 }
-.color-2-border-x {
-  border-left: 2px solid $color-2;
-  border-right: 2px solid $color-2;
+.grid_3-6 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(3, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(6, 1fr);
+  }
 }
-.color-2-border-top {
-  border-top: 2px solid $color-2;
+.grid_4-6 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(4, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(6, 1fr);
+  }
 }
-.color-2-border-left {
-  border-right: 2px solid $color-2;
+.grid_5-6 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(5, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(6, 1fr);
+  }
 }
-.color-2-border-bottom {
-  border-bottom: 2px solid $color-2;
+.grid_6 {
+  @include grid;
+  grid: auto / repeat(6, 1fr);
 }
-.color-2-border-left {
-  border-left: 2px solid $color-2;
+.grid_1-7 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(1, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(7, 1fr);
+  }
 }
-
-.color-3-border {
-  border: 2px solid $color-3;
+.grid_2-7 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(2, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(7, 1fr);
+  }
 }
-.color-3-border-y {
-  border-top: 2px solid $color-3;
-  border-bottom: 2px solid $color-3;
+.grid_3-7 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(3, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(7, 1fr);
+  }
 }
-.color-3-border-x {
-  border-left: 2px solid $color-3;
-  border-right: 2px solid $color-3;
+.grid_4-7 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(4, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(7, 1fr);
+  }
 }
-.color-3-border-top {
-  border-top: 2px solid $color-3;
+.grid_5-7 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(5, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(7, 1fr);
+  }
 }
-.color-3-border-left {
-  border-right: 2px solid $color-3;
+.grid_6-7 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(6, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(7, 1fr);
+  }
 }
-.color-3-border-bottom {
-  border-bottom: 2px solid $color-3;
+.grid_7 {
+  @include grid;
+  grid: auto / repeat(7, 1fr);
 }
-.color-3-border-left {
-  border-left: 2px solid $color-3;
+.grid_1-8 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(1, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(8, 1fr);
+  }
 }
-
-.color-4-border {
-  border: 2px solid $color-4;
+.grid_2-8 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(2, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(8, 1fr);
+  }
 }
-.color-4-border-y {
-  border-top: 2px solid $color-4;
-  border-bottom: 2px solid $color-4;
+.grid_3-8 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(3, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(8, 1fr);
+  }
 }
-.color-4-border-x {
-  border-left: 2px solid $color-4;
-  border-right: 2px solid $color-4;
+.grid_4-8 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(4, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(8, 1fr);
+  }
 }
-.color-4-border-top {
-  border-top: 2px solid $color-4;
+.grid_5-8 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(5, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(8, 1fr);
+  }
 }
-.color-4-border-left {
-  border-right: 2px solid $color-4;
+.grid_6-8 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(6, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(8, 1fr);
+  }
 }
-.color-4-border-bottom {
-  border-bottom: 2px solid $color-4;
+.grid_7-8 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(7, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(8, 1fr);
+  }
 }
-.color-4-border-left {
-  border-left: 2px solid $color-4;
+.grid_8 {
+  @include grid;
+  grid: auto / repeat(8, 1fr);
 }
-
-.unfolded-border {
-  border-top: 2px solid $color-3;
-  border-right: 2px solid $color-2;
-  border-bottom: 2px solid $color-4;
-  border-left: 2px solid $color-1;
+.grid_1-9 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(1, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(9, 1fr);
+  }
+}
+.grid_2-9 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(2, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(9, 1fr);
+  }
+}
+.grid_3-9 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(3, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(9, 1fr);
+  }
+}
+.grid_4-9 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(4, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(9, 1fr);
+  }
+}
+.grid_5-9 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(5, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(9, 1fr);
+  }
+}
+.grid_6-9 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(6, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(9, 1fr);
+  }
+}
+.grid_7-9 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(7, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(9, 1fr);
+  }
+}
+.grid_8-9 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(8, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(9, 1fr);
+  }
+}
+.grid_9 {
+  grid: auto / repeat(9, 1fr);
+}
+.grid_1-10 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(1, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(10, 1fr);
+  }
+}
+.grid_2-10 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(2, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(10, 1fr);
+  }
+}
+.grid_3-10 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(3, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(10, 1fr);
+  }
+}
+.grid_4-10 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(4, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(10, 1fr);
+  }
+}
+.grid_5-10 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(5, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(10, 1fr);
+  }
+}
+.grid_6-10 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(6, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(10, 1fr);
+  }
+}
+.grid_7-10 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(7, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(10, 1fr);
+  }
+}
+.grid_8-10 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(8, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(10, 1fr);
+  }
+}
+.grid_9-10 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(9, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(10, 1fr);
+  }
+}
+.grid_10 {
+  @include grid;
+  grid: auto / repeat(10, 1fr);
+}
+.grid_1-11 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(1, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(11, 1fr);
+  }
+}
+.grid_2-11 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(2, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(11, 1fr);
+  }
+}
+.grid_3-11 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(3, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(11, 1fr);
+  }
+}
+.grid_4-11 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(4, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(11, 1fr);
+  }
+}
+.grid_5-11 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(5, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(11, 1fr);
+  }
+}
+.grid_6-11 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(6, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(11, 1fr);
+  }
+}
+.grid_7-11 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(7, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(11, 1fr);
+  }
+}
+.grid_8-11 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(8, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(11, 1fr);
+  }
+}
+.grid_9-11 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(9, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(11, 1fr);
+  }
+}
+.grid_10-11 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(10, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(11, 1fr);
+  }
+}
+.grid_11 {
+  @include grid;
+  grid: auto / repeat(11, 1fr);
+}
+.grid_1-12 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(1, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(12, 1fr);
+  }
+}
+.grid_2-12 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(2, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(12, 1fr);
+  }
+}
+.grid_3-12 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(3, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(12, 1fr);
+  }
+}
+.grid_4-12 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(4, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(12, 1fr);
+  }
+}
+.grid_5-12 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(5, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(12, 1fr);
+  }
+}
+.grid_6-12 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(6, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(12, 1fr);
+  }
+}
+.grid_7-12 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(7, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(12, 1fr);
+  }
+}
+.grid_8-12 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(8, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(12, 1fr);
+  }
+}
+.grid_9-12 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(9, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(12, 1fr);
+  }
+}
+.grid_10-12 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(10, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(12, 1fr);
+  }
+}
+.grid_11-12 {
+  @include grid;
+  @include respond(mobitab) {
+    grid: auto / repeat(11, 1fr);
+  }
+  @include respond(lapdesk) {
+    grid: auto / repeat(12, 1fr);
+  }
+}
+.grid_12 {
+  @include grid;
+  grid: auto / repeat(12, 1fr);
 }

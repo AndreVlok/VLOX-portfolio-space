@@ -24,6 +24,7 @@ article {
   width: 100%;
   height: 100%;
   background-color: #fff !important;
+  @include round();
 }
 .card-heading {
   margin-top: 0.5rem !important;
@@ -45,5 +46,8 @@ article {
   margin: 0 auto;
   max-width: 976px;
   width: 97%;
+}
+button{
+  @include round();
 }
 </style>

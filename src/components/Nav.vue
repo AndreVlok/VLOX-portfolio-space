@@ -51,12 +51,12 @@ h6 {
   margin: auto;
   margin-top: 1rem !important;
   &:hover {
-    background-color: $color-2;
+    background-color: $clr-2;
   }
 }
 .active > h6 {
   width: min-content;
-  background-color: $color-3;
+  background-color: $clr-3;
   color: $white;
 }
 </style>

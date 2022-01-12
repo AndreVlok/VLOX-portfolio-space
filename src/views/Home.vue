@@ -11,33 +11,34 @@
           <span class="underline">Welcome, I'm Andre!</span> 👋
         </h3>
         <img
-          class="round profile"
+          class="round shadow profile"
           style="position: absolute; right: 1rem; top: 2rem; width: 90px; border: .27rem solid #ff4c42;"
           src="@/assets/images/andre-vlok-min.jpg"
           alt=""
         />
       </div>
-      <div class="center n-pad">
-        <br />
-        <br />
-        <h1>I'm a<span class="color-1"> User Experience Engineer</span></h1>
+      <div class="center n-pad-bottom">
+        <h1>I'm a<span class="clr-1"> User Experience Engineer</span></h1>
 
-        <div style="margin: 0 auto; width: 80%;">
+        <div style="margin: 0 auto; width: 72%;">
           <h2>
-            <span class="color-2">I design</span> strategic user experiences,
-            that <span class="color-2">I code</span> into high-end scalable
-            responsive <span class="color-1">prototypes</span>. Integrated with
-            analytics and a CMS,
-            <span class="color-3">you remain in control</span>. Delivered
-            through an <span class="color-4">ultra-fast CDN </span>and deployed
-            from <span class="color-4">secure repos</span>;
+            <span class="clr-2">I design</span> strategic user experiences, that
+            <span class="clr-2">I code</span> into
+            <span class="clr-4">high-fidelity</span>
+            scalable,
+            <span class="clr-3"> responsive prototypes</span>. Fully integrated
+            with user analytics - ready for testing.
+          </h2>
+          <h4>
+            Delivered through an ultra-fast CDN and deployed from secure
+            repository,<br />
             <i
-              >your prototype is the precursor to your production ready
+              >your coded prototype is the foundation to your production ready
               application.</i
             >
-          </h2>
+          </h4>
         </div>
-        <button class="button-1" id="scrollHandler">
+        <button class="n-mar-top btn-1" id="scrollHandler">
           Let's Build Your Ideas!
         </button>
       </div>

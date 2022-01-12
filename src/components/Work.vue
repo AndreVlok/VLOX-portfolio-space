@@ -1,157 +1,101 @@
-<template>
+d<template>
   <div class="round content-container">
-    <!-- AuctionInc -->
-    <article class="grid_1-2 n-pad">
-      <div
-        class="round hide-scroll"
-        style="height: 500px; overflow-y: scroll; border: 1px solid #333"
-      >
-        <perfect-scrollbar>
+    <!-- Monify & Sanlam -->
+    <article class="n-pad">
+      <img
+        class="round"
+        style="width: 100%; border: 1px solid #ccc"
+        src="@/assets/images/sanlam-mockups.jpg"
+        alt="Sanlam Mockups"
+      />
+      <div class="grid_1-2">
+        <div
+          class="round hide-scroll"
+          style="height: 500px; overflow-y: scroll; border: 1px solid #ccc"
+        >
+          <perfect-scrollbar class="round">
+            <img
+              style="width:100% !important;"
+              src="@/assets/images/sanlam-scroll-min.jpg"
+              alt="Sanlam Funeral Cover"
+            />
+            <!-- <Carousel :autoplay="8000">
+              <Slide v-for="sixslide in sixslides" :key="sixslide">
+                <img style="width: 100% !important;" :src="sixslide"
+              /></Slide>
+            </Carousel> -->
+          </perfect-scrollbar>
+        </div>
+
+        <div class="n-pad">
           <img
-            style="width:100% !important;"
-            src="@/assets/images/auctioninc-tswhane-page-min.png"
-            alt="AuctionInc Tswhane Landing Page"
+            height="50"
+            src="@/assets/logos/monify-logo-for-light-background.svg"
+            alt="Monify logo"
           />
-        </perfect-scrollbar>
-      </div>
-      <div>
-        <img
-          height="40"
-          src="@/assets/logos/auctioninc-logo-for-light-background.png"
-          alt="AunctionInc Logo"
-        />
 
-        <h4>Lead-Gen Landing Page</h4>
+          <h4>Sanlam Funeral Cover through Monify</h4>
 
-        <div>
           <p>
-            A landing page I developed for AuctionInc. South Africa's largest
-            residential property auction house. AuctionInc's marketing objective
-            with this landing page is to expand their reach into Tswhane.
+            A design I did for an Extended Family Funeral Cover calculator
+            offered by Monify, provided by Sanlam.
           </p>
-          <p>
-            The page generates leads through a simple web-form that capture the
-            customer data and sends it to a Google Sheet, making it easy for
-            AuctionInc's team to process the leads.
-          </p>
-          <a href="https://auctioninc-tswhane.netlify.app/" target="_blank">
-            <button>View Project</button>
+
+          <a download href="/sanlam-extended-family-funeral-cover-monify.pdf">
+            <button>Download Designs</button>
           </a>
         </div>
       </div>
     </article>
 
-    <!-- Monify & Sanlam -->
-    <article class="grid_1-2 n-pad">
-      <div
-        class="round hide-scroll"
-        style="height: 500px; overflow-y: scroll; border: 1px solid #333"
-      >
-        <perfect-scrollbar class="round">
-          <Carousel :autoplay="8000">
-            <Slide v-for="sixslide in sixslides" :key="sixslide">
-              <img style="width: 100% !important;" :src="sixslide"
-            /></Slide>
-          </Carousel>
-        </perfect-scrollbar>
-      </div>
-      <div>
-        <img
-          height="50"
-          src="@/assets/logos/monify-logo-for-light-background.svg"
-          alt="Monify logo"
-        />
+    <!-- AuctionInc -->
+    <article class="n-pad">
+      <img
+        class="round"
+        style="width: 100%; border: 1px solid #ccc"
+        src="@/assets/images/auctioninc-mockup-min.jpg"
+        alt="AuctionInc Mockups"
+      />
+      <div class="grid_1-2">
+        <div
+          class="round hide-scroll"
+          style="height: 500px; overflow-y: scroll; border: 1px solid #ccc"
+        >
+          <perfect-scrollbar>
+            <img
+              style="width:100% !important;"
+              src="@/assets/images/auctioninc-tswhane-page-min.png"
+              alt="AuctionInc Tswhane Landing Page"
+            />
+          </perfect-scrollbar>
+        </div>
 
-        <h4>Sanlam Funeral Cover through Monify</h4>
-
-        <p>
-          A design I did for an Extended Family Funeral Cover calculator offered
-          by Monify, provided by Sanlam.
-        </p>
-
-        <a download href="/sanlam-extended-family-funeral-cover-monify.pdf">
-          <button>Download Designs</button>
-        </a>
-      </div>
-    </article>
-
-    <!-- unfolded -->
-    <article class="grid_1-2 n-pad">
-      <div
-        class="round hide-scroll"
-        style="height: 500px; overflow-y: scroll; border: 1px solid #333"
-      >
-        <perfect-scrollbar class="round">
+        <div class="n-pad">
           <img
-            style="width:100% !important;"
-            src="@/assets/images/unfolded-min.png"
-            alt="unfolded"
+            height="40"
+            src="@/assets/logos/auctioninc-logo-for-light-background.png"
+            alt="AunctionInc Logo"
           />
-        </perfect-scrollbar>
-      </div>
 
-      <div>
-        <img
-          height="55"
-          src="@/assets/logos/unfolded-logo.svg"
-          alt="unfolded logo"
-        />
+          <h4>Lead Generator Landing Page</h4>
 
-        <h4>A Frontend Framework</h4>
-
-        <p>
-          An easy-to-use SCSS framework I built. unfolded develops the design
-          for you. Fully responsive with a simple grid system, a few classes for
-          powerful tweaking and a beautiful clean look & feel. The perfect
-          framework for your next prototype or web app.
-        </p>
-
-        <a target="_blank" href="https://unfolded.netlify.app/">
-          <button>Check It Out</button>
-        </a>
-      </div>
-    </article>
-
-    <!-- Betterbond Personal Loans -->
-    <article class="grid_1-2 n-pad">
-      <div
-        class="round hide-scroll"
-        style="height: 500px; overflow-y: scroll; border: 1px solid #333"
-      >
-        <perfect-scrollbar class="round">
-          <Carousel :autoplay="8000">
-            <Slide v-for="slide in slides" :key="slide">
-              <img
-                class="round"
-                style="border: 1px solid #ccc; width:100% !important;"
-                :src="slide"
-            /></Slide>
-          </Carousel>
-        </perfect-scrollbar>
-      </div>
-      <div>
-        <img
-          height="30"
-          src="@/assets/logos/betterbond-logo.svg"
-          alt="BetterBond logo"
-        />
-        <h4>Personal Loans Page</h4>
-        <p>
-          A design I did for BetterBond's Personal Loans calculator which
-          calculates loan amounts, terms & interest rates. Followed by a
-          lead-gen form that sends an API call to the loan partners, assessing
-          whether the customer qualifies for the requested loan.
-        </p>
-        <p>
-          Upon qualification the customer is presented with loan offers from
-          BetterBond's partners, from which the customer can then click-through
-          to either receive a call from a call center or be directed to the
-          respective loan partners application page.
-        </p>
-
-        <a href="/betterbond-personal-loan-offers.pdf" download>
-          <button>Download Designs</button>
-        </a>
+          <div>
+            <p>
+              A landing page I developed for AuctionInc. South Africa's largest
+              residential property auction house. AuctionInc's marketing
+              objective with this page is to expand their market reach into
+              Tswhane.
+            </p>
+            <p>
+              The page aims to generate leads through a simple web-form that
+              captures customer data and sends it to a Google Sheet, making it
+              easy for AuctionInc's team to process the leads.
+            </p>
+            <a href="https://auctioninc-tswhane.netlify.app/" target="_blank">
+              <button>View Project</button>
+            </a>
+          </div>
+        </div>
       </div>
     </article>
 
@@ -159,15 +103,24 @@
     <article class="grid_1-2 n-pad">
       <div
         class="round hide-scroll"
-        style="height: 800px; overflow-y: scroll; border: 1px solid #333"
+        style="height: 800px; overflow-y: scroll; border: 1px solid #ccc"
       >
-        <perfect-scrollbar class="round">
+        <article class="n-pad">
+          <iframe
+            class="center round"
+            height="768px"
+            width="360px"
+            src="https://jovial-newton-47d77f.netlify.app/#/"
+            frameborder="1"
+          ></iframe>
+        </article>
+        <!-- <perfect-scrollbar class="round">
           <Carousel :autoplay="8000">
             <Slide v-for="twoslide in twoslides" :key="twoslide">
               <img class="round" style="width: 80% !important;" :src="twoslide"
             /></Slide>
           </Carousel>
-        </perfect-scrollbar>
+        </perfect-scrollbar> -->
       </div>
 
       <div>
@@ -207,89 +160,192 @@
       </div>
     </article>
 
-    <!-- Flipit -->
+    <h3 class="txt-center">Alternative Projects</h3>
+
+    <!-- unfolded -->
     <article class="grid_1-2 n-pad">
       <div
         class="round hide-scroll"
-        style="height: 400px; overflow-y: scroll; border: 1px solid #333"
+        style="height: 500px; overflow-y: scroll; border: 1px solid #ccc"
       >
         <perfect-scrollbar class="round">
-          <Carousel :autoplay="8000">
-            <Slide v-for="threeslide in threeslides" :key="threeslide">
-              <div class="round">
-                <img
-                  class="round"
-                  style="width: 80% !important;"
-                  :src="threeslide"
-                /></div
-            ></Slide>
-          </Carousel>
+          <img
+            style="width:100% !important;"
+            src="@/assets/images/unfolded-min.png"
+            alt="unfolded"
+          />
         </perfect-scrollbar>
       </div>
+
       <div>
         <img
-          height="70"
-          src="@/assets/logos/flipit-logo.svg"
-          alt="Flipit logo"
+          height="55"
+          src="@/assets/logos/unfolded-logo.svg"
+          alt="unfolded logo"
         />
 
-        <h4>Bitcoin Betting Mobile Web App</h4>
+        <h4>A Frontend Framework</h4>
 
         <p>
-          A just-for-fun personal project I designed and developed.
+          An easy-to-use SCSS framework. unfolded develops the design for you.
+          Fully responsive with a simple grid system, a few classes for powerful
+          tweaking and a beautiful clean look & feel. The perfect framework for
+          your next prototype or web app.
         </p>
 
-        <p>
-          The Bitcoin betting application works as follows: The customer bets
-          Bitcoin on the outcome of a coin flip determined by the answer of a
-          weekly question. In this case the question asks whether the market
-          price of Bitcoin will be below or above a certain amount.
-        </p>
-
-        <a target="_blank" href="https://flipit2win.netlify.app">
-          <button>Play Around</button>
+        <a target="_blank" href="https://unfolded.netlify.app/">
+          <button>Check It Out</button>
         </a>
       </div>
     </article>
 
-    <!-- PayRun -->
-    <article class="grid_1-2 n-pad">
+    <!-- Betterbond Personal Loans -->
+    <!-- <article class="grid_1-2 n-pad">
       <div
         class="round hide-scroll"
-        style="height: 400px; overflow-y: scroll; border: 1px solid #333"
+        style="height: 500px; overflow-y: scroll; border: 1px solid #ccc"
       >
         <perfect-scrollbar class="round">
           <Carousel :autoplay="8000">
-            <Slide v-for="fiveslide in fiveslides" :key="fiveslide">
-              <div class="round">
-                <img
-                  class="round"
-                  style="border: 1px solid #ccc; width: 100% !important;"
-                  :src="fiveslide"
-                /></div
-            ></Slide>
+            <Slide v-for="slide in slides" :key="slide">
+              <img
+                class="round"
+                style="border: 1px solid #ccc; width:100% !important;"
+                :src="slide"
+            /></Slide>
           </Carousel>
         </perfect-scrollbar>
       </div>
       <div>
         <img
-          height="40"
-          src="@/assets/logos/payrun-logo.png"
-          alt="PayRun logo"
+          height="30"
+          src="@/assets/logos/betterbond-logo.svg"
+          alt="BetterBond logo"
         />
-
-        <h4>PayRun Internal Payments</h4>
-
+        <h4>Personal Loans Page</h4>
         <p>
-          A UI I designed for an internal payment processing solution that
-          verify's and initiates payments to customers' eWallets (provided by
-          Prepaid24 & SmartFund) embedded on Monify (Financial Services for
-          Government Employees) platform.
+          A design I did for BetterBond's Personal Loans calculator which
+          calculates loan amounts, terms & interest rates. Followed by a
+          lead-gen form that sends an API call to the loan partners, assessing
+          whether the customer qualifies for the requested loan.
+        </p>
+        <p>
+          Upon qualification the customer is presented with loan offers from
+          BetterBond's partners, from which the customer can then click-through
+          to either receive a call from a call center or be directed to the
+          respective loan partners application page.
         </p>
 
-        <a download href="/payrun.pdf">
-          <button>Download Design</button>
+        <a href="/betterbond-personal-loan-offers.pdf" download>
+          <button>Download Designs</button>
         </a>
+      </div>
+    </article> -->
+
+    <!-- Flipit -->
+    <article class="n-pad">
+      <img
+        class="round"
+        style="width: 100%; border: 1px solid #ccc"
+        src="@/assets/images/flipit-mockup-min.png"
+        alt="Flipit Mockups"
+      />
+      <div class="grid_1-2">
+        <div
+          class="round hide-scroll"
+          style=" height: 400px; overflow-y: scroll; border: 1px solid #ccc"
+        >
+          <perfect-scrollbar
+            style="background-color: #212328 !important;"
+            class="center round"
+          >
+            <img
+              style="width: 77%"
+              src="@/assets/images/flipit-scroll.png"
+              alt="Flipit"
+            />
+            <!-- <Carousel :autoplay="8000">
+              <Slide v-for="threeslide in threeslides" :key="threeslide">
+                <div class="round">
+                  <img
+                    class="round"
+                    style="width: 100% !important;"
+                    :src="threeslide"
+                  /></div
+              ></Slide>
+            </Carousel> -->
+          </perfect-scrollbar>
+        </div>
+
+        <div class="n-pad">
+          <img
+            height="70"
+            src="@/assets/logos/flipit-logo.svg"
+            alt="Flipit logo"
+          />
+
+          <h4>Bitcoin Betting Web App</h4>
+
+          <p>
+            Players bets Bitcoin on the outcome of a daily coin flip determined
+            by the answer of a weekly question. In this case the question asks
+            whether the market price of Bitcoin will be below or above a certain
+            amount.
+          </p>
+
+          <a target="_blank" href="https://flipit2win.netlify.app">
+            <button>Play Around</button>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- PayRun -->
+    <article class="n-pad">
+      <img
+        class="round"
+        style="width: 100%; border: 1px solid #ccc"
+        src="@/assets/images/payrun-mockup-min.jpg"
+        alt="Payrun Mockups"
+      />
+
+      <div class="grid_1-2">
+        <div
+          class="round hide-scroll"
+          style="height: 305px; overflow-y: scroll; border: 1px solid #ccc"
+        >
+          <perfect-scrollbars
+            style="background-color: white !important;"
+            class="round"
+          >
+            <Carousel :autoplay="8000">
+              <Slide v-for="fiveslide in fiveslides" :key="fiveslide">
+                <div class="round">
+                  <img style="width: 100% !important;" :src="fiveslide" /></div
+              ></Slide>
+            </Carousel>
+          </perfect-scrollbars>
+        </div>
+
+        <div class="n-pad">
+          <img
+            height="40"
+            src="@/assets/logos/payrun-logo.png"
+            alt="PayRun logo"
+          />
+
+          <h4>Internal Customer Payout UI</h4>
+
+          <p>
+            A UI for an internal payout solution, that verify's and initiates
+            payments to customers' eWallets (provided by Prepaid24 & SmartFund
+            embedded on Monify).
+          </p>
+
+          <a download href="/payrun.pdf">
+            <button>Download Design</button>
+          </a>
+        </div>
       </div>
     </article>
 
@@ -310,7 +366,7 @@
           insurance, personal loans and a simple debit card.
         </p>
       </div>
-      <Carousel :autoplay="8000">
+      <Carousel>
         <Slide v-for="fourslide in fourslides" :key="fourslide">
           <div class="round">
             <img
@@ -417,7 +473,7 @@ export default {
         require("@/assets/images/flipit (8)-min.png"),
       ],
       fourslides: [
-        require("@/assets/images/InstaBank/instabank (1)-min.jpg"),
+        // require("@/assets/images/InstaBank/instabank (1)-min.jpg"),
         require("@/assets/images/InstaBank/instabank (2)-min.jpg"),
         require("@/assets/images/InstaBank/instabank (3)-min.jpg"),
         require("@/assets/images/InstaBank/instabank (4)-min.jpg"),
