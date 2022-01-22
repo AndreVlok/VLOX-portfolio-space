@@ -1,5 +1,92 @@
 d<template>
   <div class="round content-container">
+    <!-- Monify Personal Loans -->
+    <article class="n-pad">
+      <img
+        class="round"
+        style="width: 100%; border: 1px solid #ccc"
+        src="@/assets/images/monify-personal-loan-mockups-min.png"
+        alt="Monify Personal Loans Mockups"
+      />
+      <div class="grid_1-2">
+        <div class="bg-grey m-pad-y round hide-scroll">
+          <iframe
+            class="center round brdr-black"
+            height="580px"
+            width="360px"
+            src="https://vlox-prototype-personal-loans.netlify.app"
+            frameborder="1"
+          ></iframe>
+          <!-- <perfect-scrollbar class="round">
+          <Carousel :autoplay="8000">
+            <Slide v-for="twoslide in twoslides" :key="twoslide">
+              <img class="round" style="width: 80% !important;" :src="twoslide"
+            /></Slide>
+          </Carousel>
+        </perfect-scrollbar> -->
+        </div>
+
+        <div class="n-pad">
+          <img
+            height="50"
+            src="@/assets/logos/monify-logo-for-light-background.svg"
+            alt="Monify logo"
+          />
+          <h4>Monify Mobile Personal Loans Application</h4>
+          <p>
+            A full-scale UX project with VUE.js coded prototype (backend
+            integrable) I built for Monify Personal Loans Application. From
+            analytics to information architecture (sitemap, content hierarchy
+            modelling, user-flow). Customer relationship analysis (persona,
+            customer journey map, service blueprint) to UI design and prototype
+            development.
+          </p>
+          <p>Monify personal loans work as follows:</p>
+          <ul>
+            <ol>
+              Government employees receive SMS
+            </ol>
+            <ol>
+              Calculates loan values
+            </ol>
+            <ol>
+              Clicks through to application form
+            </ol>
+            <ol>
+              Presented with loan offers
+            </ol>
+          </ul>
+
+          <div class="grid_2">
+            <div>
+              <a
+                target="_blank"
+                href="https://vlox-project-personal-loans.netlify.app"
+              >
+                <button>Explore UX Project</button>
+              </a>
+              <p style="font-size: 12px;" class="clr-3 no-mar">
+                Note: Only intended for desktop view, as the project
+                documentation holds large diagrams, spreadsheets and mockups.
+              </p>
+            </div>
+            <div>
+              <a
+                target="_blank"
+                href="https://vlox-prototype-personal-loans.netlify.app"
+              >
+                <button>Play with Prototype</button>
+              </a>
+              <p style="font-size: 12px;" class="clr-3 no-mar">
+                Note: Only intended for mobile view, as the customer will be
+                clicking through from a marketing SMS link to get to their loan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <!-- Monify & Sanlam -->
     <article class="n-pad">
       <img
@@ -37,8 +124,15 @@ d<template>
           <h4>Sanlam Funeral Cover through Monify</h4>
 
           <p>
-            A design I did for an Extended Family Funeral Cover calculator
-            offered by Monify, provided by Sanlam.
+            A UI design I did for an Extended Family Funeral Cover calculator
+          </p>
+
+          <p>
+            A total monthly premium is calculated from different premiums for an
+            array of extended family members, each with their own age-gap
+            parameters. Once the totals has been calculated, the customer
+            submits their personal details to await a callback from a Sanlam
+            sales agent.
           </p>
 
           <a download href="/sanlam-extended-family-funeral-cover-monify.pdf">
@@ -77,14 +171,16 @@ d<template>
             alt="AunctionInc Logo"
           />
 
-          <h4>Lead Generator Landing Page</h4>
+          <h4>AuctionInc Lead Generator Page</h4>
 
           <div>
             <p>
-              A landing page I developed for AuctionInc. South Africa's largest
-              residential property auction house. AuctionInc's marketing
-              objective with this page is to expand their market reach into
-              Tswhane.
+              A lead generating landing page I developed for AuctionInc. South
+              Africa's largest residential property auction house.
+            </p>
+            <p>
+              AuctionInc's marketing objective with this page is to expand their
+              market reach into Tswhane.
             </p>
             <p>
               The page aims to generate leads through a simple web-form that
@@ -92,70 +188,40 @@ d<template>
               easy for AuctionInc's team to process the leads.
             </p>
             <a href="https://auctioninc-tswhane.netlify.app/" target="_blank">
-              <button>View Project</button>
+              <button>View Page</button>
             </a>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- Monify Personal Loans -->
-    <article class="grid_1-2 n-pad">
-      <div
-        class="round hide-scroll"
-        style="height: 800px; overflow-y: scroll; border: 1px solid #ccc"
-      >
-        <article class="n-pad">
-          <iframe
-            class="center round"
-            height="768px"
-            width="360px"
-            src="https://jovial-newton-47d77f.netlify.app/#/"
-            frameborder="1"
-          ></iframe>
-        </article>
-        <!-- <perfect-scrollbar class="round">
-          <Carousel :autoplay="8000">
-            <Slide v-for="twoslide in twoslides" :key="twoslide">
-              <img class="round" style="width: 80% !important;" :src="twoslide"
-            /></Slide>
-          </Carousel>
-        </perfect-scrollbar> -->
-      </div>
+    <!-- Public Homepage -->
+    <h3 class="txt-center">Technical Documentation</h3>
 
-      <div>
+    <article class="n-pad">
+      <div class="n-pad">
         <img
           height="50"
           src="@/assets/logos/monify-logo-for-light-background.svg"
           alt="Monify logo"
         />
-        <h4>Monify Mobile Personal Loans Process</h4>
+        <h4>Monify Public Homepage Development Brief</h4>
         <p>
-          A design I did for Monify's (Financial Services for Government
-          Employees) Personal Loans SMS sweep (OTP drop-off) campaign; with the
-          business objective being to get the customer to subscribe in unison
-          with them submitting their personal details for loan qualification.
+          The Monify Public Homepage development brief is a 63 page document
+          with color coded instructions on styling, content & functionality to
+          be re-developed, by the development team.
         </p>
         <p>
-          Government employees in Monify's database are sent SMS's to market
-          them personal loans. Once they click-through on the link in the SMS,
-          the customer lands on a loan calculator page. After playing with the
-          calculator the customer clicks on the 'fixed to screen' [GET LOAN NOW]
-          button. With the objective being subscribe & apply, the customer is
-          presented with a modal-form that functions both as a subscription
-          submission and loan qualification (which is run to loan partners
-          through an API call on the backend).
+          Both the UI designs in the document as well as the document itself has
+          been created by me, with cross-checking done by my team.
         </p>
-        <p>
-          Upon completion of the form the customer is presented with loan offers
-          from Monify's partners, from which the customer can then click-through
-          to either receive a call from a call center or be directed to the
-          respective loan partners application page. Post submission the
-          customer is redirected back to Monify and presented with a post-submit
-          modal.
-        </p>
-        <a download href="/monify-personal-loans.pdf">
-          <button>Download Designs</button>
+        <p>Feel free to download the document below, for an in depth view.</p>
+        <a
+          target="_blank"
+          download
+          href="/public-homepage-variation-construct.pdf"
+        >
+          <button>Download Brief</button>
         </a>
       </div>
     </article>
@@ -184,13 +250,16 @@ d<template>
           alt="unfolded logo"
         />
 
-        <h4>A Frontend Framework</h4>
+        <h4>A Frontend Styling Framework</h4>
 
         <p>
-          An easy-to-use SCSS framework. unfolded develops the design for you.
-          Fully responsive with a simple grid system, a few classes for powerful
-          tweaking and a beautiful clean look & feel. The perfect framework for
-          your next prototype or web app.
+          An SCSS frontend styling framework I wrote.
+        </p>
+
+        <p>
+          unfolded develops the design for you. Fully responsive with a simple
+          grid system, a few classes for powerful tweaking and a beautiful clean
+          look & feel. The perfect framework for your next prototype or web app.
         </p>
 
         <a target="_blank" href="https://unfolded.netlify.app/">
@@ -198,49 +267,6 @@ d<template>
         </a>
       </div>
     </article>
-
-    <!-- Betterbond Personal Loans -->
-    <!-- <article class="grid_1-2 n-pad">
-      <div
-        class="round hide-scroll"
-        style="height: 500px; overflow-y: scroll; border: 1px solid #ccc"
-      >
-        <perfect-scrollbar class="round">
-          <Carousel :autoplay="8000">
-            <Slide v-for="slide in slides" :key="slide">
-              <img
-                class="round"
-                style="border: 1px solid #ccc; width:100% !important;"
-                :src="slide"
-            /></Slide>
-          </Carousel>
-        </perfect-scrollbar>
-      </div>
-      <div>
-        <img
-          height="30"
-          src="@/assets/logos/betterbond-logo.svg"
-          alt="BetterBond logo"
-        />
-        <h4>Personal Loans Page</h4>
-        <p>
-          A design I did for BetterBond's Personal Loans calculator which
-          calculates loan amounts, terms & interest rates. Followed by a
-          lead-gen form that sends an API call to the loan partners, assessing
-          whether the customer qualifies for the requested loan.
-        </p>
-        <p>
-          Upon qualification the customer is presented with loan offers from
-          BetterBond's partners, from which the customer can then click-through
-          to either receive a call from a call center or be directed to the
-          respective loan partners application page.
-        </p>
-
-        <a href="/betterbond-personal-loan-offers.pdf" download>
-          <button>Download Designs</button>
-        </a>
-      </div>
-    </article> -->
 
     <!-- Flipit -->
     <article class="n-pad">
@@ -284,14 +310,17 @@ d<template>
             alt="Flipit logo"
           />
 
-          <h4>Bitcoin Betting Web App</h4>
+          <h4>A Mobile Bitcoin Betting App</h4>
 
           <p>
-            Players bets Bitcoin on the outcome of a daily coin flip determined
-            by the answer of a weekly question. In this case the question asks
-            whether the market price of Bitcoin will be below or above a certain
-            amount.
+            A mobile Bitcoin betting app I developed for fun!
           </p>
+          <p>
+            Players bet Bitcoin on the outcome of a daily coin flip determined
+            by the answer of a weekly question.
+          </p>
+
+          <p>Play around below to check it out</p>
 
           <a target="_blank" href="https://flipit2win.netlify.app">
             <button>Play Around</button>
@@ -312,7 +341,7 @@ d<template>
       <div class="grid_1-2">
         <div
           class="round hide-scroll"
-          style="height: 305px; overflow-y: scroll; border: 1px solid #ccc"
+          style="height: 325px; overflow-y: scroll; border: 1px solid #ccc"
         >
           <perfect-scrollbars
             style="background-color: white !important;"
@@ -334,12 +363,16 @@ d<template>
             alt="PayRun logo"
           />
 
-          <h4>Internal Customer Payout UI</h4>
+          <h4>PayRun Customer Payment Mechanism</h4>
 
           <p>
-            A UI for an internal payout solution, that verify's and initiates
-            payments to customers' eWallets (provided by Prepaid24 & SmartFund
-            embedded on Monify).
+            Systems & UI design I did for PayRun an internal customer payment
+            mechanism.
+          </p>
+
+          <p>
+            PayRun allows employees in Monify's financial department to log into
+            the system and initiate payments to customers.
           </p>
 
           <a download href="/payrun.pdf">
@@ -357,14 +390,20 @@ d<template>
         src="@/assets/logos/instabank-logo.svg"
         alt="InstaBank logo"
       />
-      <a download href="@/assets/docs/instabank.pdf">
-        <h4>InstaBank Brand Identity</h4>
-      </a>
+
+      <h4>InstaBank Lean Brand Expression Guide</h4>
+
       <div class="center" style="max-width: 500px;">
         <p>
-          A concept bank brand identity I designed. InstaBank offers personal
-          insurance, personal loans and a simple debit card.
+          A lean brand expression guide I designed for InstaBank.
         </p>
+        <p>
+          InstaBank offers personal loans, personal insurance and a simple debit
+          card.
+        </p>
+        <a download href="@/assets/docs/instabank.pdf">
+          <button>Download Expression Guide</button></a
+        >
       </div>
       <Carousel>
         <Slide v-for="fourslide in fourslides" :key="fourslide">
@@ -380,81 +419,20 @@ d<template>
         </template>
       </Carousel>
     </article>
-
-    <!-- Swiftouch 
-        <article class="center n-pad ">
-          <img
-            class="n-mar-top"
-            height="50"
-            src="@/assets/logos/swiftouch-full-logo.svg"
-            alt="Swiftouch logo"
-          />
-          <h4>Web Components</h4>
-          <p>
-            Built for immediate customer engagement at the marketing touchpoint
-            in the customer journey, distributed as hashtaggable content through
-            native marketing. These VUE.js components are published as node
-            packages, delivering marketing with lead generation functionality
-            through an ultra-fast CDN requiring only 2 lines of codes for
-            implementation
-          </p>
-          <hr />
-          <div class="left grid_1-2">
-            <div>
-              <h4>Article on Home Blog</h4>
-              <p>
-                ... average age of first-time buyers is now around 34, and that
-                would suggest that many, if not most, are planning a lasting
-                commitment to a home with enough bedroom, leg room and garden
-                space to grow a family, and enough living space for easy,
-                at-home entertaining.
-              </p>
-              <SwiftouchCompAuctionInc />
-              <p>
-                And this is borne out by the latest report from property data
-                company Lightstone, which shows that the average life span of
-                home ownership...
-              </p>
-            </div>
-            <div>
-              <h4>Example 2 - Home Loans Article</h4>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Similique velit animi laborum. Hic beatae cupiditate suscipit
-                aspernatur, nisi dicta debitis.
-              </p>
-              <p>#Component | wararara</p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Similique velit animi laborum. Hic beatae cupiditate suscipit
-                aspernatur, nisi dicta debitis.
-              </p>
-            </div>
-          </div>
-        </article>-->
   </div>
 </template>
 
 <script>
-// import SwiftouchCompAuctionInc from "./SwiftouchCompAuctionInc.vue";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination } from "vue3-carousel";
 export default {
   components: {
-    //SwiftouchCompAuctionInc,
     Carousel,
     Slide,
     Pagination,
   },
   data() {
     return {
-      slides: [
-        require("@/assets/images/betterbond-loans (1)-min.jpg"),
-        require("@/assets/images/betterbond-loans (2)-min.jpg"),
-        require("@/assets/images/betterbond-loans (3)-min.jpg"),
-        require("@/assets/images/betterbond-loans (4)-min.jpg"),
-        require("@/assets/images/betterbond-loans (5)-min.jpg"),
-      ],
       twoslides: [
         require("@/assets/images/monify-loans (1)-min.jpg"),
         require("@/assets/images/monify-loans (2)-min.jpg"),

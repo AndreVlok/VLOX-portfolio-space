@@ -11,7 +11,7 @@
           <span class="underline">Welcome, I'm Andre!</span> 👋
         </h3>
         <img
-          class="round shadow profile"
+          class="round profile"
           style="position: absolute; right: 1rem; top: 2rem; width: 90px; border: .27rem solid #ff4c42;"
           src="@/assets/images/andre-vlok-min.jpg"
           alt=""
