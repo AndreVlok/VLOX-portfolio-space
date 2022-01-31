@@ -46,9 +46,9 @@
         <p>
           With the legwork completed, the UX design phase can begin. During this
           phase strategies to effectively engage your user, meet their
-          expectations, and guide them to accomplish their objectives in an
-          intuitive and appealing flow is designed. The end-goal being to marry
-          user goals with business goals.
+          expectations, and guide them to accomplish their objectives in
+          intuitively are designed. The end-goal being to marry user goals with
+          business goals.
         </p>
         <p style="margin-bottom: 0 !important;">Design Process:</p>
         <div style="grid-gap: 8px !important;" class="grid_2">
@@ -57,36 +57,36 @@
             <ul>
               <li>Sitemap</li>
               <li>User Flow Mapping</li>
-              <li>Content Hierarchy Model</li>
-              <li>Low-Fidelty Wireframing</li>
+              <li>Content Modelling</li>
+              <li>Wireframing</li>
             </ul>
           </div>
           <div>
-            <p><b>Customer/Business Relationship</b></p>
+            <p><b>Customer Relationship</b></p>
             <ul>
               <li>Persona Targeting</li>
-              <li>Customer Journey Mapping</li>
+              <li>Journey Mapping</li>
               <li>Service Blueprinting</li>
             </ul>
           </div>
         </div>
       </article>
 
-      <!-- STEP 5 -->
+      <!-- STEP 4 -->
       <article class="n-pad">
         <div class="wrapper">
           <img style="width: 40px;" src="@/assets/icons/step-4.svg" />
-          <h3><b>STEP 5</b></h3>
+          <h3><b>STEP 4</b></h3>
         </div>
         <h4>Prototype Development & Testing</h4>
         <p>
-          After the UX design phase is completed, the project is sent to you for
-          review. Once reviewed and changes have been applied, the development
-          (coding) of the prototype can begin.
+          After the UX design phase is completed, the project with outlined
+          strategies is sent to the client for review. Once reviewed, the
+          development of the prototype can begin.
         </p>
         <p>
-          During prototype development, a fully functional high-fidelity working
-          skeleton of your application is built in
+          During prototype development, a fully functional high-fidelity
+          front-end for your application is built with
           <a target="_blank" href="https://www.vuejs.org"
             ><span class="clr-2">Vue.js</span></a
           >
@@ -101,18 +101,15 @@
             target="_blank"
             href="http://www.hotjar.com"
             ><span class="clr-2">www.hotjar.com </span></a
-          >), in order to measure user behavior.
-        </p>
-        <p>
-          After development, an internal test is run to measure usability.
+          >), in order to measure user behavior from the get go.
         </p>
       </article>
 
-      <!-- STEP 6 -->
+      <!-- STEP 5 -->
       <article class="n-pad">
         <div class="wrapper">
           <img style="width: 40px;" src="@/assets/icons/step-7.svg" />
-          <h3><b>STEP 6</b></h3>
+          <h3><b>STEP 5</b></h3>
         </div>
         <h4>Handover Launch</h4>
         <p>
@@ -124,13 +121,13 @@
           repository, from which it gets deployed onto a content delivery
           network (<a target="_blank" href="https://www.netlify.com"
             ><span class="clr-2">www.netlify.com</span></a
-          >) into a development environment. This enables your design &
-          development team to access the source code & review the prototype on
-          the internet.
+          >) into a development environment. This enables the client's design &
+          development teams to access the source code & review the prototype in
+          a dedicated environment.
         </p>
         <p>
           A final handover presentation (virtually, or in person) is done with
-          you and respective teams, during which a link to the project
+          the client and respective teams, during which a link to the project
           documentation and prototype is shared.
         </p>
       </article>
@@ -143,10 +140,10 @@
         </div>
         <h4>Digital Design & Backend Development</h4>
         <p>
-          With the prototype complete, your design & development teams can now
-          access/download the source code to implement brand identity and other
-          design elements as well as further develop backend functionality to
-          convert the prototype into a production ready application.
+          With the prototype complete, the client's design & development teams
+          can now clone the repository to implement additional design elements
+          as well as further develop backend functionality to convert the
+          prototype into a production ready application.
         </p>
       </article>
     </div>
@@ -158,13 +155,13 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-article {
-  border-left: 2px solid $clr-2;
-  border-top: 2px solid $clr-2;
-}
 h3 {
   color: $clr-1;
   margin: 0.5rem 1.4rem auto 1.4rem;
+}
+
+li {
+  margin: 0 !important;
 }
 
 .wrapper {

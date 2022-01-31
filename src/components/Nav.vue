@@ -1,8 +1,8 @@
 <template>
   <div>
     <div
-      style="border: 2px solid #ccc; margin: 0rem auto 2rem auto; width: 77%;"
-      class="round nav w-mar-bottom grid_1-5"
+      style=" margin: 0rem auto 2rem auto; width: 77%;"
+      class="brdr-bottom-black nav w-mar-bottom grid_1-5"
     >
       <div
         v-for="tab in tabs"
@@ -56,7 +56,7 @@ h6 {
 }
 .active > h6 {
   width: min-content;
-  background-color: $clr-3;
+  background-color: $clr-2;
   color: $white;
 }
 </style>

@@ -1,5 +1,5 @@
 // Feel free to replace the imports and variables below with your own.
-@import url("https://use.typekit.net/bxw1frh.css");
+@import url("https://use.typekit.net/umh1qeu.css");
 
 // Variable
 $primary-font: co-text, sans-serif !important;
@@ -215,7 +215,7 @@ body {
   font-display: swap;
   color: $txt-clr;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
 }
 
 // A responsive nav, that aligns it's children (nav-items) as you place them.
@@ -437,7 +437,7 @@ h1 {
     font-size: calc(40px + 8 * (100vw - 1366px) / 2400);
     margin: calc(32px + 8 * (100vw - 768px) / 1366) 0;
   }
-  font-weight: bold !important;
+  font-weight: 700 !important;
 }
 
 // Section Heading
@@ -459,6 +459,7 @@ h2 {
     font-size: calc(32px + 6 * (100vw - 1366px) / 2400);
     margin: calc(28px + 6 * (100vw - 1366px) / 2400) 0;
   }
+  font-weight: 400 !important;
 }
 
 // Paragraph Heading
@@ -480,6 +481,7 @@ h3 {
     font-size: calc(26px + 6 * (100vw - 1366px) / 2400);
     margin: calc(22px + 4 * (100vw - 1366px) / 2400) 0;
   }
+  font-weight: 400 !important;
 }
 
 // Paragraph Sub-Heading
@@ -501,6 +503,7 @@ h4 {
     font-size: calc(20px + 4 * (100vw - 1366px) / 2400);
     margin: calc(16px + 4 * (100vw - 1366px) / 2400) 0;
   }
+  font-weight: 400 !important;
 }
 
 p,

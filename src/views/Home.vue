@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header n-pad">
-      <div style="display: inline-flex;">
+      <div class="m-mar-bottom" style="display: inline-flex;">
         <img
           style="margin-left: 1rem; margin-right: 1rem;"
           src="@/assets/logos/vlox-logo.svg"
@@ -18,27 +18,26 @@
         />
       </div>
       <div class="center n-pad-bottom">
-        <h1>I'm a<span class="clr-1"> User Experience Engineer</span></h1>
+        <h1>I'm a User Experience Engineer</h1>
 
         <div style="margin: 0 auto; width: 72%;">
           <h2>
             <span class="clr-2">I design</span> strategic user experiences, that
-            <span class="clr-2">I code</span> into
-            <span class="clr-4">high-fidelity</span>
-            scalable,
-            <span class="clr-3"> responsive prototypes</span>. Fully integrated
-            with user analytics - ready for testing.
+            <span class="clr-2">I code</span> <br />
+            into <span class="clr-1">scalable</span>,
+            <span class="clr-3"> responsive </span>
+            <span class="clr-4">prototypes</span>
           </h2>
           <h4>
-            Delivered through an ultra-fast CDN and deployed from secure
-            repository,<br />
+            These are delivered through an ultra-fast CDN and deployed from
+            secure repositories. <br />
             <i
-              >your coded prototype is the foundation to your production ready
+              >Your coded prototype is the foundation to your production ready
               application.</i
             >
           </h4>
         </div>
-        <button class="n-mar-top btn-1" id="scrollHandler">
+        <button class="n-mar-top" id="scrollHandler">
           Let's Build Your Ideas!
         </button>
       </div>

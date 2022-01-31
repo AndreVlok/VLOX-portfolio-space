@@ -1,21 +1,16 @@
 <template>
-  <article
-    class="center w-pad-right w-pad-left w-pad-bottom round unfolded-border content-container"
+  <div
+    class="center w-pad-right w-pad-left round unfolded-border content-container"
   >
-    <br />
-    <br />
-    <br />
     <div v-if="hideForm">
-      <h3 class="txt-center">Tell me a little bit more about your project?</h3>
+      <h3 class="txt-center">Tell me about your project</h3>
       <br />
       <form
         class="txt-left"
         name="submitContact"
         @submit.prevent="handleSubmit(onSubmit)"
       >
-        <label for="message"
-          >Share your ideas, goals and problems/solutions</label
-        >
+        <label for="message">What are your needs?</label>
         <textarea name="message"></textarea>
         <label for="name">Name</label>
         <input type="text" name="name" />
@@ -34,7 +29,7 @@
     <div v-if="!showMsg">
       <h3>Thanks for getting in touch, I'll get back to you shortly.</h3>
     </div>
-  </article>
+  </div>
 </template>
 
 <script>
