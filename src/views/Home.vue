@@ -18,7 +18,7 @@
         />
       </div>
       <div class="center n-pad-bottom">
-        <h1>I'm a User Experience Engineer</h1>
+        <h1>I'm a User Experience & Interface Engineer</h1>
 
         <div style="margin: 0 auto; width: 72%;">
           <h2>
