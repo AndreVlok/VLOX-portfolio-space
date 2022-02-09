@@ -24,8 +24,8 @@
 
         <p>
           My <i>forte</i> is the working with the front-end of financial
-          technology; but I am becoming more curious and interested about the
-          benefits of DeFi, dApps & blockchain as a whole.
+          technology; but I am becoming more curious about the benefits of DeFi,
+          dApps & blockchain as a whole.
         </p>
 
         <p>
